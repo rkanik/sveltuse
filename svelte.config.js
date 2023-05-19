@@ -20,7 +20,7 @@ const config = {
 	},
 	kit: {
 		adapter: vercel({
-			runtime: 'edge'
+			// runtime: 'edge'
 		}),
 		// adapter: cloudflare({
 		// 	routes: {
