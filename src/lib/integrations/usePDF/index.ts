@@ -37,7 +37,7 @@ const getWritable = <T>(w: Writable<T>): T => {
 }
 
 export default function usePDF(options: UsePDFOptions) {
-	let {
+	const {
 		src,
 		pdfjs,
 		workerSrc,
@@ -79,8 +79,9 @@ export default function usePDF(options: UsePDFOptions) {
 	const pageNumber = writable(1)
 	const getPageNumber = () => getWritable(pageNumber)
 
+	const pageNumbers = writable<number[]>([])
+
 	let pages: TPage[] = []
-	let pageNumbers = writable<number[]>([])
 	let isScrollingPagesElement = false
 
 	const setPage = (
@@ -139,10 +140,10 @@ export default function usePDF(options: UsePDFOptions) {
 		getPDF()
 			.getPage(event.number)
 			.then(async (page: any) => {
-				let innerScale = getScale() || event.scale || 1
-				let innerViewport = page.getViewport({ scale: innerScale })
+				const innerScale = getScale() || event.scale || 1
+				const innerViewport = page.getViewport({ scale: innerScale })
 
-				let $viewport = getViewport()
+				const $viewport = getViewport()
 				if (!$viewport || $viewport.scale !== innerScale) {
 					viewport.set(innerViewport)
 				}
@@ -284,7 +285,7 @@ export default function usePDF(options: UsePDFOptions) {
 		}
 
 		let timeout: NodeJS.Timeout
-		let container = pagesContainerGetter()
+		const container = pagesContainerGetter()
 
 		const onScroll = () => {
 			clearTimeout(timeout)

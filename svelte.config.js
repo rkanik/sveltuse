@@ -1,7 +1,7 @@
 import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
-import vercel from '@sveltejs/adapter-vercel'
-// import cloudflare from '@sveltejs/adapter-cloudflare'
+// import vercel from '@sveltejs/adapter-vercel'
+import cloudflare from '@sveltejs/adapter-cloudflare'
 import preprocess from 'svelte-preprocess'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -19,15 +19,15 @@ const config = {
 		}
 	},
 	kit: {
-		adapter: vercel({
-			// runtime: 'edge'
-		}),
-		// adapter: cloudflare({
-		// 	routes: {
-		// 		include: ['/*'],
-		// 		exclude: ['<all>']
-		// 	}
+		// adapter: vercel({
+		// 	// runtime: 'edge'
 		// }),
+		adapter: cloudflare({
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
+		}),
 		alias: {
 			[`sveltuse`]: 'src/lib',
 			[`sveltuse/*`]: 'src/lib/*',
