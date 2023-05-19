@@ -45,9 +45,9 @@
 
 	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]))
 
-	onMount(() => {
-		console.log(data)
-	})
+	// onMount(() => {
+	// 	console.log(data)
+	// })
 </script>
 
 <Sidebar

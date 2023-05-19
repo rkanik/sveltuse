@@ -1,15 +1,3 @@
----
-layout: componentLayout
-breadcrumb_title: usePDF
-title: usePDF
-component_title: usePDF
-dir: Integrations
-description: Render PDF using `pdfjs-dist`.
----
-
-## Sample pdf renderer
-
-```svelte example
 <script lang="ts">
 	import usePDF from 'sveluse/integrations/usePDF'
 
@@ -41,12 +29,11 @@ description: Render PDF using `pdfjs-dist`.
 		pdfjs,
 		workerSrc,
 		src: '/pdf/sample.pdf',
-		initialScale: 0.9,
 		pagesContainerGetter: () => pagesContainer
 	})
 </script>
 
-<div class="">
+<div class="container mx-auto py-16">
 	<div
 		class="bg-gray-900 border border-gray-700 flex flex-col h-[80vh] overflow-hidden">
 		<div
@@ -123,4 +110,3 @@ description: Render PDF using `pdfjs-dist`.
 		}
 	}
 </style>
-```

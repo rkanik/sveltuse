@@ -21,7 +21,12 @@ const config = {
 		}
 	},
 	kit: {
-		adapter: adapter({ runtime: 'edge' })
+		adapter: adapter({ runtime: 'edge' }),
+		alias: {
+			'@shared': 'src/lib/shared',
+			'@shared/*': 'src/lib/shared/*',
+			'sveluse/integrations/*': 'src/lib/integrations/*'
+		}
 	}
 }
 
