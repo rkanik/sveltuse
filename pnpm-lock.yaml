@@ -13,6 +13,9 @@ dependencies:
   flowbite:
     specifier: ^1.6.5
     version: 1.6.5
+  flowbite-svelte:
+    specifier: ^0.36.2
+    version: 0.36.2(@algolia/client-search@4.17.0)(@popperjs/core@2.11.7)(classnames@2.3.2)(flowbite@1.6.5)(svelte@3.59.0)
   pdfjs-dist:
     specifier: ^3.6.172
     version: 3.6.172
@@ -1625,6 +1628,27 @@ packages:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}
     dev: true
 
+  /flowbite-svelte@0.36.2(@algolia/client-search@4.17.0)(@popperjs/core@2.11.7)(classnames@2.3.2)(flowbite@1.6.5)(svelte@3.59.0):
+    resolution: {integrity: sha512-WnD+ukU5p2saxsjoS50gz/bNKD/QsHBmd9EGMycEKF0MsqAvDoEUaFXMsoxNYNQTwyTeCPTmsNdj0CVKKk0yfA==}
+    engines: {node: '>=16.0.0', npm: '>=7.0.0'}
+    peerDependencies:
+      '@popperjs/core': ^2.11.6
+      classnames: ^2.3.2
+      flowbite: ^1.6.3
+      svelte: ^3.55.1
+    dependencies:
+      '@docsearch/js': 3.3.4(@algolia/client-search@4.17.0)
+      '@popperjs/core': 2.11.7
+      classnames: 2.3.2
+      flowbite: 1.6.5
+      svelte: 3.59.0
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - '@types/react'
+      - react
+      - react-dom
+    dev: false
+
   /flowbite@1.6.5:
     resolution: {integrity: sha512-eI4h3pIRI9d7grlYq14r0A01KUtw7189sPLLx/O2i7JyPEWpbleScfYuEc48XTeNjk1xxm/JHgZkD9kjyOWAlA==}
     dependencies:
@@ -2882,7 +2906,6 @@ packages:
   /svelte@3.59.0:
     resolution: {integrity: sha512-Di1wVPwdWriw5pSyInMRpr5EZmwrzKxtDKv5aXu8A/WDUi59Y5bIvl42eLef0x1vwz+ZtrjdnT8nXir2bDqR/A==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tailwindcss@3.3.2:
     resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}

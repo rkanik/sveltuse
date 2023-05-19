@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { afterNavigate } from '$app/navigation'
-	import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper } from '$lib'
+	import {
+		Sidebar,
+		SidebarGroup,
+		SidebarItem,
+		SidebarWrapper
+	} from 'flowbite-svelte'
+
 	import SidebarDropdownWrapper from '$lib/sidebars/SidebarDropdownWrapper.svelte'
 	import ChevronDown from '$lib/utils/ChevronDown.svelte'
 	import ChevronRight from '$lib/utils/ChevronRight.svelte'

@@ -1,5 +1,5 @@
 import { onMount } from 'svelte'
-import { readable, writable } from 'svelte/store'
+import { writable } from 'svelte/store'
 
 export function useMounted() {
 	let isMounted = writable(false)

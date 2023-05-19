@@ -1,5 +1,5 @@
 {
-	"name": "sveluse",
+	"name": "svelteuse",
 	"version": "0.0.2",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"main": "dist/index.js",
@@ -25,7 +25,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"write-package-json": "node ./scripts/package-json-writer.js",
 		"add-exports": "node ./scripts/add-exports-to-package-json.js",
-		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm run write-package-json && npm publish",
+		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm publish",
 		"gen:props": "createprops"
 	},
 	"peerDependencies": {
@@ -83,18 +83,14 @@
 		"@popperjs/core": "^2.11.7",
 		"classnames": "^2.3.2",
 		"flowbite": "^1.6.5",
+		"flowbite-svelte": "^0.36.2",
 		"pdfjs-dist": "^3.6.172"
 	},
 	"engines": {
 		"npm": ">=7.0.0",
 		"node": ">=16.0.0"
 	},
-	"exports": {
-		"./PDF.svelte": {
-			"types": "./dist/accordion/Accordion.svelte.d.ts",
-			"svelte": "./dist/accordion/Accordion.svelte"
-		}
-	},
+	"exports": {},
 	"files": [
 		"dist"
 	],

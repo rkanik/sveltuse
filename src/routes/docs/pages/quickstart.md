@@ -7,11 +7,7 @@ dir: Pages
 description: Learn how to get started with the free and open-source Flowbite Svelte UI component library based on the utility classes from Tailwind CSS
 ---
 
-<script>
-  import { A, P, List, Li } from '$lib'
-</script>
-
-You can install Flowbite Svelte by using the <A href='/docs/extend/flowbite-svelte-starter'>flowbite-svelte-start</A> or from scratch.
+You can install Flowbite Svelte by using the <a href='/docs/extend/flowbite-svelte-starter'>flowbite-svelte-start</a> or from scratch.
 
 ## Getting started
 
@@ -161,23 +157,11 @@ That's it! Now you should be able to work with the Flowbite Svelte library and i
 
 Now you are ready to go! Add the following to `src/routes/+page.svelte` and if you see the following image, then your setting is complete.
 
-```svelte example 
-<script>
-	import { Alert } from 'flowbite-svelte';
-</script>
-
-<div class="p-8">
-	<Alert>
-		<span class="font-medium">Info alert!</span> Change a few things up and try submitting again.
-	</Alert>
-</div>
-```
-
 ## Starters
 
 You can use one of starter repo for a quick start.
 
-<List tag='ul' class='space-y-1 my-4'>
-<Li><A href='https://github.com/shinokada/flowbite-svelte-starter'>Flowbite-SvelteKit starter</A></Li>
-<Li><A href='https://github.com/ZekyTheWolf/LIST-Starter'>Laravel, Inertia, Svelte, Typescript with Flowbite starter</A></Li>
-</List>
+<ul tag='ul' class='space-y-1 my-4'>
+<li><a href='https://github.com/shinokada/flowbite-svelte-starter'>Flowbite-SvelteKit starter</a></li>
+<li><a href='https://github.com/ZekyTheWolf/LIST-Starter'>Laravel, Inertia, Svelte, Typescript with Flowbite starter</a></li>
+</ul>
