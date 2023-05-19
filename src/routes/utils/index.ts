@@ -22,11 +22,15 @@ const sortByList = (order: string[]) => (a: [string, any], b: [string, any]) =>
 
 export const fetchMarkdownPosts = async () => {
 	const pageFiles = import.meta.glob<Mdsvex>('/src/routes/docs/pages/*.md')
+	const functionFiles = import.meta.glob<Mdsvex>(
+		'/src/routes/docs/functions/*.md'
+	)
 	const integrationFiles = import.meta.glob<Mdsvex>(
 		'/src/routes/docs/integrations/*.md'
 	)
 
 	const iterablePageFiles = Object.entries(pageFiles)
+	const iterableFunctionFiles = Object.entries(functionFiles)
 	const iterableIntegrationFiles = Object.entries(integrationFiles)
 
 	// returns an array of paths, /introduction from /src/routes/pages/introduction.md
@@ -51,6 +55,17 @@ export const fetchMarkdownPosts = async () => {
 	)
 
 	// returns an array of paths, /icons from /src/routes/extend/icons.md
+	const allFunctions = await Promise.all(
+		iterableFunctionFiles.map(async ([path, resolver]) => {
+			const { metadata } = await resolver()
+			return {
+				meta: metadata,
+				path: filePath(path)
+			}
+		})
+	)
+
+	// returns an array of paths, /icons from /src/routes/extend/icons.md
 	const allIntegrations = await Promise.all(
 		iterableIntegrationFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver()
@@ -63,6 +78,7 @@ export const fetchMarkdownPosts = async () => {
 
 	return {
 		pages: allPages,
+		functions: allFunctions,
 		integrations: allIntegrations
 	}
 }
