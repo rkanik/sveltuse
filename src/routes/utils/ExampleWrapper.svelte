@@ -6,6 +6,7 @@
 	import { page } from '$app/stores'
 	import type { PageData } from '../$types'
 	import { identity } from 'svelte/internal'
+   import DarkMode from 'sveltuse/darkmode/DarkMode.svelte'
 	export let divClass =
 		'w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-2 sm:p-6'
 
@@ -112,6 +113,7 @@
 					</Button>
 					<div class="ml-auto">
 						<ExampleDarkMode on:click={() => (dark = !dark)} {dark} />
+                           <!-- <DarkMode/>  -->
 					</div>
 				{/if}
 			</div>

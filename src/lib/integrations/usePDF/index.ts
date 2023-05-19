@@ -1,4 +1,4 @@
-import { onMount } from 'svelte'
+import { onDestroy, onMount } from 'svelte'
 import { useIntersectionObserver } from '$lib/core'
 import { writable, type Writable } from 'svelte/store'
 
@@ -7,8 +7,6 @@ import downloadFile from '@shared/utils/downloadFile'
 
 type UsePDFOptions = {
 	src: string
-	pdfjs: any
-	workerSrc: string
 	filename?: string
 
 	// scale
@@ -39,8 +37,6 @@ const getWritable = <T>(w: Writable<T>): T => {
 export default function usePDF(options: UsePDFOptions) {
 	const {
 		src,
-		pdfjs,
-		workerSrc,
 		filename = src.split('/').pop(),
 
 		// scale
@@ -60,7 +56,7 @@ export default function usePDF(options: UsePDFOptions) {
 		pagesContainerGetter
 	} = options
 
-	pdfjs.GlobalWorkerOptions.workerSrc = workerSrc
+	let pdfjs: any
 
 	const { onIntersect } = useIntersectionObserver()
 
@@ -354,14 +350,48 @@ export default function usePDF(options: UsePDFOptions) {
 		printFile(src)
 	}
 
+	let link: any
+	let script: any
+
 	onMount(() => {
-		pdfjs.getDocument(src).promise.then((v: any) => {
-			pdf.set(v)
-			numPages.set(v.numPages)
-			pageNumbers.set(
-				[...Array(v.numPages).keys()].map((index) => index + 1)
-			)
-		})
+		script = document.createElement('script')
+		// script.src = '//mozilla.github.io/pdf.js/build/pdf.js'
+		script.src =
+			'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.6.172/pdf.min.js'
+
+		link = document.createElement('link')
+
+		link.rel = 'stylesheet'
+		link.href =
+			'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.6.172/pdf_viewer.min.css'
+		// link.href = '//mozilla.github.io/pdf.js/web/viewer.css'
+
+		script.onload = () => {
+			// Loaded via <script> tag, create shortcut to access PDF.js exports.
+			pdfjs = window['pdfjs-dist/build/pdf']
+
+			// The workerSrc property shall be specified.
+			pdfjs.GlobalWorkerOptions.workerSrc =
+				'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.6.172/pdf.worker.min.js'
+			// pdfjs.GlobalWorkerOptions.workerSrc =
+			// 	'//mozilla.github.io/pdf.js/build/pdf.worker.js'
+
+			pdfjs.getDocument(src).promise.then((v: any) => {
+				pdf.set(v)
+				numPages.set(v.numPages)
+				pageNumbers.set(
+					[...Array(v.numPages).keys()].map((index) => index + 1)
+				)
+			})
+		}
+
+		document.head.appendChild(link)
+		document.head.appendChild(script)
+	})
+
+	onDestroy(() => {
+		link?.remove()
+		script?.remove()
 	})
 
 	return {
