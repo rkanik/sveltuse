@@ -6,7 +6,7 @@
 		NavHamburger,
 		NavBrand,
 		Tooltip,
-		DarkMode,
+		// DarkMode,
 		Navbar
 	} from 'flowbite-svelte'
 
@@ -21,6 +21,7 @@
 	import type { LayoutData } from './$types'
 	import NavSidebarHamburger from '$lib/navbar/NavSidebarHamburger.svelte'
 	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
+	import DarkMode from '$lib/darkmode/DarkMode.svelte'
 
 	export let data: LayoutData
 
@@ -105,7 +106,8 @@
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on GitHub"
 				href="https://github.com/rkanik/svelteuse">
-				<GitHub /></ToolbarLink>
+				<GitHub />
+			</ToolbarLink>
 			<!-- <ToolbarLink
 				class="hidden xl:inline-block dark:hover:text-white hover:text-gray-900"
 				name="Join community on Discord"
@@ -119,8 +121,9 @@
 			<DarkMode
 				size="lg"
 				class="inline-block dark:hover:text-white hover:text-gray-900" />
-			<Tooltip class="dark:bg-gray-900" placement="bottom-end"
-				>Toggle dark mode</Tooltip>
+			<Tooltip class="dark:bg-gray-900" placement="bottom-end">
+				Toggle dark mode
+			</Tooltip>
 		</div>
 		<a href="https://www.npmjs.com/package/svelteuse" class="hidden sm:block">
 			<DocBadge

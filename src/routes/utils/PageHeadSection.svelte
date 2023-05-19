@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Heading from '$lib/typography/Heading.svelte'
+	import { Heading } from 'flowbite-svelte'
 	import CompoDescription from './CompoDescription.svelte'
 
 	export let dir: string
