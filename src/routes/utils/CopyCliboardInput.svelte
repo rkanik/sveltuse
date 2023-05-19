@@ -8,7 +8,7 @@
 	const text_copied = 'Copied!'
 	const text_not_copied = 'Copy to clipboard'
 
-	let placeholder: string = 'npm install svelteuse'
+	let placeholder: string = 'npm install sveltuse'
 	let tooltip_text: string = text_not_copied
 	let open: boolean | undefined = undefined
 

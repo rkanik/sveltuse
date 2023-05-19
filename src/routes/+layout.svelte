@@ -105,7 +105,7 @@
 			<ToolbarLink
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on GitHub"
-				href="https://github.com/rkanik/svelteuse">
+				href="https://github.com/rkanik/sveltuse">
 				<GitHub />
 			</ToolbarLink>
 			<!-- <ToolbarLink
@@ -125,7 +125,7 @@
 				Toggle dark mode
 			</Tooltip>
 		</div>
-		<a href="https://www.npmjs.com/package/svelteuse" class="hidden sm:block">
+		<a href="https://www.npmjs.com/package/sveltuse" class="hidden sm:block">
 			<DocBadge
 				large
 				class="ml-2 xl:ml-6 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-800 dark:hover:text-white">

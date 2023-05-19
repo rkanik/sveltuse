@@ -14,7 +14,7 @@ const config = {
 	},
 	resolve: {
 		alias: {
-			svelteuse: path.resolve(process.cwd(), './src/lib/index.ts')
+			// sveltuse: path.resolve(process.cwd(), './src/lib/index.ts')
 		}
 	}
 }

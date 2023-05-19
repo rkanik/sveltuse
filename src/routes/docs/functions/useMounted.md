@@ -11,7 +11,7 @@ description: Reactive isMounted variable.
 
 ```svelte example
 <script lang="ts">
-import { useMounted } from 'svelteuse'
+import { useMounted } from 'sveltuse'
 
 const isMounted = useMounted()
 </script>

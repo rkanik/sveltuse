@@ -72,7 +72,7 @@
 				</div>
 				<a
 					class="flex gap-2 items-center text-primary-700 text-base font-medium whitespace-nowrap hover:underline"
-					href="http://github.com/rkanik/svelteuse">
+					href="http://github.com/rkanik/sveltuse">
 					See our repository <ChevronRight variation="solid" />
 				</a>
 			</div>

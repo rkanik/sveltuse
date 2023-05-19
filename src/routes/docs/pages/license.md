@@ -1,15 +1,15 @@
 ---
 layout: componentLayout
-breadcrumb_title: License - Flowbite Svelte
-title: License - Flowbite Svelte
+breadcrumb_title: License - SveltUse
+title: License - SveltUse
 component_title: License
 dir: Pages
-description: Learn more about the open-source licensing rights of the Flowbite Svelte UI component library
+description: Learn more about the open-source licensing rights of the SveltUse UI component library
 ---
 
 ## MIT License
 
-#### Copyright (c) 2022 Flowbite Svelte
+#### Copyright (c) 2023 sveltuse
 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

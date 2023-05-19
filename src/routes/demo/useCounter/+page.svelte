@@ -1,15 +1,3 @@
----
-layout: componentLayout
-breadcrumb_title: useCounter
-title: useCounter
-component_title: useCounter
-dir: Integrations
-description: Basic counter with utility functions.
----
-
-## Usage
-
-```svelte example
 <script lang="ts">
 	import { Button } from 'flowbite-svelte'
 	import { useCounter } from 'sveltuse'
@@ -43,5 +31,3 @@ description: Basic counter with utility functions.
 		</Button>
 	</div>
 </div>
-
-```
