@@ -1,17 +1,19 @@
 // vite function to get all md files from components dir
 const allFiles = [
-  import.meta.glob('/src/routes/docs/components/*.md'),
-  import.meta.glob('/src/routes/docs/forms/*.md'),
-  import.meta.glob('/src/routes/docs/typography/*.md'),
-  import.meta.glob('/src/routes/docs/examples/*.md'),
-  import.meta.glob('/src/routes/docs/utilities/*.md'),
-  import.meta.glob('/src/routes/docs/pages/*.md'),
-  import.meta.glob('/src/routes/docs/extend/*.md'),
-  import.meta.glob('/src/routes/docs/experimental/*.md')
+	//   import.meta.glob('/src/routes/docs/components/*.md'),
+	//   import.meta.glob('/src/routes/docs/forms/*.md'),
+	//   import.meta.glob('/src/routes/docs/typography/*.md'),
+	//   import.meta.glob('/src/routes/docs/examples/*.md'),
+	//   import.meta.glob('/src/routes/docs/utilities/*.md'),
+	import.meta.glob('/src/routes/docs/pages/*.md'),
+	import.meta.glob('/src/routes/docs/functions/*.md'),
+	import.meta.glob('/src/routes/docs/integrations/*.md'),
+	//   import.meta.glob('/src/routes/docs/extend/*.md'),
+	//   import.meta.glob('/src/routes/docs/experimental/*.md')
 ]
-  .flatMap(Object.keys)
-  .map((x) => x.replace(/\.[^/.]+$/, ''))
-  .map((x) => x.split('/').slice(-2));
+	.flatMap(Object.keys)
+	.map((x) => x.replace(/\.[^/.]+$/, ''))
+	.map((x) => x.split('/').slice(-2))
 
 // list of directories that do not require redirection check
 const dirsToSkip = ['/docs/', '/blocks/', '/api/'];
