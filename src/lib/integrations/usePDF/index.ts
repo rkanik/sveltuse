@@ -1,6 +1,7 @@
+import { writable } from 'svelte/store'
 import { onDestroy, onMount } from 'svelte'
 import { useIntersectionObserver } from '$lib/core'
-import { writable, type Writable } from 'svelte/store'
+import { getWritable } from 'sveltuse/utils/getWritable'
 
 import printFile from '@shared/utils/printFile'
 import downloadFile from '@shared/utils/downloadFile'
@@ -24,14 +25,6 @@ type UsePDFOptions = {
 
 	// elements
 	pagesContainerGetter?: () => HTMLElement
-}
-
-const getWritable = <T>(w: Writable<T>): T => {
-	let v
-	w.subscribe(($v) => {
-		v = $v
-	})()
-	return v as T
 }
 
 export default function usePDF(options: UsePDFOptions) {
