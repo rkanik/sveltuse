@@ -1,5 +1,14 @@
 import type { SvelteComponent } from 'svelte'
 
+export type Arrayable<T> = T[] | T
+
+/**
+ * Any function
+ */
+export type AnyFn = (...args: any[]) => any
+
+export type MaybeGetter<T> = T | (() => T)
+
 export type BlockQuoteType =
 	| 'xs'
 	| 'sm'
