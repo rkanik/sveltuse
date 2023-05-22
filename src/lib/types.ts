@@ -1,4 +1,5 @@
 import type { SvelteComponent } from 'svelte'
+import type { Writable, Readable } from 'svelte/store'
 
 export type Arrayable<T> = T[] | T
 
@@ -7,7 +8,11 @@ export type Arrayable<T> = T[] | T
  */
 export type AnyFn = (...args: any[]) => any
 
-export type MaybeGetter<T> = T | (() => T)
+export type Store<T> = Writable<T> | Readable<T>
+
+export type MaybeGetter<T> = T | Store<T> | (() => T)
+
+export type MaybeArray<T> = T | T[]
 
 export type BlockQuoteType =
 	| 'xs'

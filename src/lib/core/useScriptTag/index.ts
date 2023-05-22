@@ -6,7 +6,7 @@ import type { ConfigurableDocument } from '../_configurable'
 import { noop } from 'sveltuse/shared'
 import { writable } from 'svelte/store'
 import { onDestroy, onMount } from 'svelte'
-import { toValue } from 'sveltuse/utils/toValue'
+import toValue from 'sveltuse/utils/toValue'
 import { defaultDocument } from '../_configurable'
 import { getWritable } from 'sveltuse/utils/getWritable'
 
