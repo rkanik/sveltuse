@@ -3,8 +3,8 @@ import { onDestroy, onMount } from 'svelte'
 import { useIntersectionObserver } from '$lib/core'
 import { getWritable } from 'sveltuse/utils/getWritable'
 
-import printFile from '@shared/utils/printFile'
-import downloadFile from '@shared/utils/downloadFile'
+import printFile from 'sveltuse/utils/print'
+import downloadFile from 'sveltuse/utils/download'
 
 type UsePDFOptions = {
 	src: string

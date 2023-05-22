@@ -31,9 +31,7 @@ const config = {
 		alias: {
 			[`sveltuse`]: 'src/lib',
 			[`sveltuse/*`]: 'src/lib/*',
-			'@shared': 'src/lib/shared',
-			'@shared/*': 'src/lib/shared/*',
-			'sveluse/integrations/*': 'src/lib/integrations/*'
+			[`components/*`]: 'src/components/*'
 		}
 	}
 }

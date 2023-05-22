@@ -1,4 +1,4 @@
-import { anonymous } from 'sveltuse/utils/anonymous'
+import anonymous from 'sveltuse/utils/anonymous'
 import { useSupported } from '../useSupported'
 
 export function useIsSupported(checker: () => unknown, callback = anonymous) {

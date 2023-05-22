@@ -4,7 +4,7 @@ import type { ConfigurableWindow } from '../_configurable'
 import { onDestroy } from 'svelte'
 import { writable } from 'svelte/store'
 import { useSupported } from '../useSupported'
-import { defaultWindow } from '../_configurable'
+import { defaultWindow } from 'sveltuse/constants'
 
 /**
  * Reactive Media Query.

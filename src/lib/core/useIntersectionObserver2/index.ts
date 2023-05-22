@@ -1,9 +1,9 @@
 import type { ConfigurableWindow } from '../_configurable'
 
 import { writable, type Readable, type Writable } from 'svelte/store'
-import { defaultWindow } from '../_configurable'
 import { getWritable } from 'sveltuse/utils/getWritable'
 import { useIsSupported } from '../useIsSupported'
+import { defaultWindow } from 'sveltuse/constants'
 
 export interface UseIntersectionObserverOptions extends ConfigurableWindow {
 	/**

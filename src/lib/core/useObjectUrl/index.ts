@@ -2,13 +2,13 @@
 
 import type { MaybeArray, MaybeGetter } from 'sveltuse/types'
 
-import { noop } from 'sveltuse/shared'
 import { writable } from 'svelte/store'
 import { onDestroy, onMount } from 'svelte'
 
 import toValue from 'sveltuse/utils/toValue'
 import getStore from 'sveltuse/utils/getStore'
 import toArray from 'sveltuse/utils/toArray'
+import anonymous from 'sveltuse/utils/anonymous'
 
 /**
  * Reactive URL representing an object.
@@ -43,7 +43,7 @@ export function useObjectUrl(
 		}
 	}
 
-	let unsubscribeStore = noop
+	let unsubscribeStore = anonymous
 	onMount(() => {
 		create()
 

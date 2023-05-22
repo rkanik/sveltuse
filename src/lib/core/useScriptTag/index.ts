@@ -3,12 +3,12 @@
 import type { MaybeGetter } from 'sveltuse/types'
 import type { ConfigurableDocument } from '../_configurable'
 
-import { noop } from 'sveltuse/shared'
 import { writable } from 'svelte/store'
 import { onDestroy, onMount } from 'svelte'
 import toValue from 'sveltuse/utils/toValue'
-import { defaultDocument } from '../_configurable'
 import { getWritable } from 'sveltuse/utils/getWritable'
+import { defaultDocument } from 'sveltuse/constants'
+import anonymous from 'sveltuse/utils/anonymous'
 
 export interface UseScriptTagOptions extends ConfigurableDocument {
 	/**
@@ -70,7 +70,7 @@ export interface UseScriptTagOptions extends ConfigurableDocument {
  */
 export function useScriptTag(
 	src: MaybeGetter<string>,
-	onLoaded: (el: HTMLScriptElement) => void = noop,
+	onLoaded: (el: HTMLScriptElement) => void = anonymous,
 	options: UseScriptTagOptions = {}
 ) {
 	const {

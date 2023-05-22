@@ -19,9 +19,9 @@
 	// import YouTube from './utils/icons/YouTube.svelte'
 	import ToolbarLink from './utils/ToolbarLink.svelte'
 	import type { LayoutData } from './$types'
-	import NavSidebarHamburger from '$lib/navbar/NavSidebarHamburger.svelte'
 	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
-	import DarkMode from '$lib/darkmode/DarkMode.svelte'
+	import NavSidebarHamburger from 'components/navbar/NavSidebarHamburger.svelte'
+	import DarkMode from 'components/darkmode/DarkMode.svelte'
 
 	export let data: LayoutData
 

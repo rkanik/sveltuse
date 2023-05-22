@@ -1,8 +1,10 @@
 /* this implementation is original ported from https://vueuse.org/core/useBreakpoints */
 import { writable, type Writable } from 'svelte/store'
-import { defaultWindow, type ConfigurableWindow } from '../_configurable'
+
+import type { ConfigurableWindow } from '../_configurable'
 
 import { useMediaQuery } from '../useMediaQuery'
+import { defaultWindow } from 'sveltuse/constants'
 import { increaseWithUnit } from 'sveltuse/utils/increaseWithUnit'
 
 export * from './breakpoints'

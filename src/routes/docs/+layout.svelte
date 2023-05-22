@@ -7,12 +7,12 @@
 		SidebarWrapper
 	} from 'flowbite-svelte'
 
-	import SidebarDropdownWrapper from '$lib/sidebars/SidebarDropdownWrapper.svelte'
-	import ChevronDown from '$lib/utils/ChevronDown.svelte'
-	import ChevronRight from '$lib/utils/ChevronRight.svelte'
+	import ChevronDown from 'components/icons/ChevronDown.svelte'
+	import ChevronRight from 'components/icons/ChevronRight.svelte'
 	import { getContext, onMount } from 'svelte'
 	import type { Writable } from 'svelte/store'
 	import type { PageData } from '../$types'
+	import SidebarDropdownWrapper from 'components/sidebars/SidebarDropdownWrapper.svelte'
 
 	export let data: PageData
 

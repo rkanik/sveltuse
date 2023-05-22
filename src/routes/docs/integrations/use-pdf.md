@@ -12,7 +12,7 @@ description: Render PDF using `pdfjs-dist`.
 ```svelte example
 <script lang="ts">
 	import classNames from 'classnames'
-	import usePDF from 'sveluse/integrations/usePDF'
+	import usePDF from 'sveltuse/integrations/usePDF'
 
 	let pagesContainer: HTMLDivElement
 
