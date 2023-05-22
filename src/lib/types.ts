@@ -19,6 +19,23 @@ export type MaybeArray<T> = T | T[]
  */
 export type Fn = () => void
 
+export interface Stoppable<StartFnArgs extends any[] = any[]> {
+	/**
+	 * A ref indicate whether a stoppable instance is executing
+	 */
+	isPending: Readable<boolean>
+
+	/**
+	 * Stop the effect from executing
+	 */
+	stop: Fn
+
+	/**
+	 * Start the effects
+	 */
+	start: (...args: StartFnArgs) => void
+}
+
 export type Pausable = {
 	/**
 	 * A ref indicate whether a pausable instance is active
