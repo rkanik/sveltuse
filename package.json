@@ -1,6 +1,6 @@
 {
 	"name": "sveltuse",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"main": "dist/index.js",
 	"author": {

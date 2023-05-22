@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useIntersectionObserver2 } from 'sveltuse'
+	import { useIntersectionObserver } from 'sveltuse'
 </script>
 
 <div>
