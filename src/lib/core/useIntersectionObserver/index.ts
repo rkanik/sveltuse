@@ -23,7 +23,15 @@ export function useIntersectionObserver(): UseIntersectionObserverReturn {
 	)
 
 	const onIntersect = (target: Element, init: IntersectOptions) => {
-		const { options, onEnter = () => {}, onLeave = () => {} } = init
+		const {
+			options,
+			onEnter = () => {
+				//
+			},
+			onLeave = () => {
+				//
+			}
+		} = init
 
 		// instance
 		const observer = new IntersectionObserver(

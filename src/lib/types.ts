@@ -14,6 +14,28 @@ export type MaybeGetter<T> = T | Store<T> | (() => T)
 
 export type MaybeArray<T> = T | T[]
 
+/**
+ * Void function
+ */
+export type Fn = () => void
+
+export type Pausable = {
+	/**
+	 * A ref indicate whether a pausable instance is active
+	 */
+	isActive: Writable<boolean>
+
+	/**
+	 * Temporary pause the effect from executing
+	 */
+	pause: Fn
+
+	/**
+	 * Resume the effects
+	 */
+	resume: Fn
+}
+
 export type BlockQuoteType =
 	| 'xs'
 	| 'sm'
