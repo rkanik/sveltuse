@@ -13,8 +13,10 @@
 				Get started
 			</h2>
 			<p class="max-w-2xl text-lg text-center">
-				Explore our Svelte UI components – easily create clean, accessible
-				web designs. Begin your journey and enhance your projects today.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda,
+				iusto id! Exercitationem totam adipisci non, laboriosam recusandae
+				fuga hic? Fugiat quam sit soluta ad odit impedit voluptas numquam
+				dolores laboriosam..
 			</p>
 		</div>
 		<div class="mt-4 md:mt-5 sm:flex justify-center sm:justify-start1 w-full">
@@ -24,7 +26,7 @@
 				<Button
 					size="lg"
 					class="gap-2 sm:max-w-sm w-full md:w-fit whitespace-nowrap hover:bg-primary-800"
-					href="/docs/components/accordion"
+					href="/docs/functions/useCounter"
 					color="primary">
 					See our docs <ArrowRight />
 				</Button>

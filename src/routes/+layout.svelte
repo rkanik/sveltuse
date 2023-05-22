@@ -60,10 +60,10 @@
 				btnClass="mr-3 m-0 mr-3 lg:hidden" />
 		</span>
 		<NavBrand href="/">
-			<img src={logo} class="mr-3 h-8" alt="SvelteUse Logo" />
+			<img src={logo} class="mr-3 h-8" alt="Sveltuse Logo" />
 			<span
 				class="self-center whitespace-nowrap text-2xl font-semibold text-gray-900 dark:text-white">
-				SvelteUse
+				Sveltuse
 			</span>
 		</NavBrand>
 

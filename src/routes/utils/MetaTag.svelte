@@ -32,7 +32,7 @@
         alt: `${title}`
       }
     ],
-    site_name: 'Flowbite Svelte'
+    site_name: 'Sveltuse'
   }}
   twitter={{
     handle: '@shinokada',

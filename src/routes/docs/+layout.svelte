@@ -32,7 +32,7 @@
 	let activeUrl: string
 
 	afterNavigate((navigation) => {
-		// this fixes https://github.com/themesberg/flowbite-svelte/issues/364
+		// this fixes https://github.com/rkanik/flowbite-svelte/issues/364
 		document.getElementById('svelte')?.scrollTo({ top: 0 })
 		closeDrawer()
 

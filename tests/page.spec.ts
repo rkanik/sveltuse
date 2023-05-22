@@ -7,22 +7,22 @@ test('index page should have h1', async ({ page }) => {
 
 test('About page should have h1', async ({ page }) => {
   await page.goto('/docs/pages/introduction');
-  expect(await page.textContent('h1')).toBe('Flowbite Svelte - UI Component Library');
+  expect(await page.textContent('h1')).toBe('Sveltuse - UI Component Library');
 });
 
 test('Getting Started page should have h1', async ({ page }) => {
   await page.goto('/docs/pages/quickstart');
-  expect(await page.textContent('h1')).toBe('Quickstart - Flowbite Svelte');
+  expect(await page.textContent('h1')).toBe('Quickstart - Sveltuse');
 });
 
 test('How to contribute page should have h1', async ({ page }) => {
   await page.goto('/docs/pages/how-to-contribute');
-  expect(await page.textContent('h1')).toBe('How to Contribute - Flowbite Svelte');
+  expect(await page.textContent('h1')).toBe('How to Contribute - Sveltuse');
 });
 
 test('License page should have h1', async ({ page }) => {
   await page.goto('/docs/pages/license');
-  expect(await page.textContent('h1')).toBe('License - Flowbite Svelte');
+  expect(await page.textContent('h1')).toBe('License - Sveltuse');
 });
 
 test('Type list page should have h1', async ({ page }) => {

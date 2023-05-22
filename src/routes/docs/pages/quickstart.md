@@ -4,7 +4,7 @@ breadcrumb_title: Quickstart - SveltUse
 title: Quickstart - SveltUse
 component_title: Quickstart
 dir: Pages
-description: Learn how to get started with the free and open-source SveltUse UI component library based on the utility classes from Tailwind CSS
+description: Collection of essential Svelte Composition Utilities
 ---
 
 ## Installation

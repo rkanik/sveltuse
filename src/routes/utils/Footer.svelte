@@ -16,20 +16,14 @@
 
 	const footer_links = {
 		Resources: {
-			GitHub: 'https://github.com/themesberg/flowbite-svelte',
-			Flowbite: 'https://flowbite.com/',
-			'Tailwind CSS': 'https://tailwindcss.com/',
-			'Figma Design': 'https://flowbite.com/figma/'
+			GitHub: 'https://github.com/rkanik/sveltuse',
+			'Tailwind CSS': 'https://tailwindcss.com/'
 		},
 		'Help and Support': {
-			'Discord Community': 'https://discord.gg/4eeurUVvTy',
-			'GitHub Discussions':
-				'https://github.com/themesberg/flowbite-svelte/discussions'
+			'GitHub Discussions': 'https://github.com/rkanik/sveltuse/issues'
 		},
 		Legal: {
-			License:
-				'https://github.com/themesberg/flowbite-svelte/blob/main/LICENSE',
-			'Brand usage': 'https://flowbite.com/brand/'
+			License: 'https://github.com/rkanik/sveltuse/blob/main/LICENSE'
 		}
 	}
 </script>
@@ -44,18 +38,18 @@
 				<FooterBrand
 					href="https://flowbite-svelte.com"
 					src={logo}
-					alt="SvelteUse Logo"
-					name="SvelteUse"
+					alt="Sveltuse Logo"
+					name="Sveltuse"
 					class="text-gray-900 dark:text-white" />
 				<p class="max-w-sm mb-3 text-gray-600 dark:text-gray-400 mt-4">
-					SvelteUse is an open-source UI component library built with
-					Svelte components and Tailwind CSS that can help you build
-					websites faster.
+					Sveltuse is an open-source UI component library built with Svelte
+					components and Tailwind CSS that can help you build websites
+					faster.
 				</p>
 				<p class="max-w-sm mb-3 text-gray-600 dark:text-gray-400">
 					Code licensed
 					<a
-						href="https://github.com/themesberg/flowbite-svelte/blob/main/LICENSE"
+						href="https://github.com/rkanik/sveltuse/blob/main/LICENSE"
 						class="text-primary-600 hover:underline">
 						MIT</a
 					>, docs

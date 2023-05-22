@@ -19,9 +19,9 @@
 
 	let data: PageData = $page.data
 
-	// https://github.com/themesberg/flowbite-svelte/blob/main/src/routes/docs/components/accordion.md#always-open
+	// https://github.com/rkanik/sveltuse/blob/main/src/routes/docs/components/accordion.md#always-open
 	const gitHub = new URL(
-		'https://github.com/themesberg/flowbite-svelte/blob/main/src/routes/'
+		'https://github.com/rkanik/sveltuse/blob/main/src/routes/'
 	)
 
 	let path: URL

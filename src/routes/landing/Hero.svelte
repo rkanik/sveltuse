@@ -14,13 +14,13 @@
 						class="text-4xl lg:text-6xl leading-none font-extrabold text-gray-900 dark:text-white max-w-2xl">
 						<span
 							class="block1 text-primary-700 dark:text-primary-700 xl:inline"
-							>SvelteUse</span> <br />
+							>Sveltuse</span> <br />
 						<span class="block1 xl:inline"
 							>Collection of Svelte Composition Utilities</span>
 					</h1>
 					<p
 						class="text-lg lg:text-xl leading-normal text-gray-500 dark:text-gray-400 max-w-2xl">
-						Flowbite Svelte is a collection of Essential Svelte and
+						Sveltuse is a collection of Essential Svelte and
 						Sveltekit Composition Utilities
 					</p>
 					<div
