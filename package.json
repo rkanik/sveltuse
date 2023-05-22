@@ -72,8 +72,14 @@
 	"keywords": [
 		"svelte",
 		"sveltekit",
-		"tailwindcss",
-		"darkmode"
+		"svelteuse",
+		"sveltuse",
+		"svelte-use",
+		"utilities",
+		"reusable",
+		"composable",
+		"composition",
+		"functions"
 	],
 	"repository": {
 		"type": "git",
