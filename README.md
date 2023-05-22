@@ -1,12 +1,35 @@
-# FLOWBITE-SVELTE 
+# SVELTUSE
+Collection of essential Svelte Utility Functions.
 
-[![npm version](https://badgen.net/npm/v/flowbite-svelte)](https://www.npmjs.com/package/flowbite-svelte)
-[![npm downloads](https://badgen.net/npm/dw/flowbite-svelte)](https://www.npmjs.com/package/flowbite-svelte)
-[![npm downloads](https://badgen.net/npm/dt/flowbite-svelte)](https://www.npmjs.com/package/flowbite-svelte)
-[![license](https://badgen.net/npm/license/flowbite-svelte)](https://github.com/themesberg/flowbite-svelte/blob/main/LICENSE)
-[![Discord](https://img.shields.io/discord/902911619032576090?color=%237289da&label=Discord)](https://discord.com/invite/4eeurUVvTy)
+[![npm version](https://badgen.net/npm/v/sveltuse)](https://www.npmjs.com/package/sveltuse)
+[![npm downloads](https://badgen.net/npm/dw/sveltuse)](https://www.npmjs.com/package/sveltuse)
+[![npm downloads](https://badgen.net/npm/dt/sveltuse)](https://www.npmjs.com/package/sveltuse)
+[![license](https://badgen.net/npm/license/sveltuse)](https://github.com/themesberg/sveltuse/blob/main/LICENSE)
 
-**⚠️ Flowbite Svelte is currently in early development and APIs and packages are likely to change quite often.**
+**⚠️ Sveltuse Svelte is currently in early development and APIs and packages are likely to change quite often.**
+
+# 📦 Install
+
+
+
+# 🦄 Usage
+
+```ts
+import { 
+   useCounter, 
+   useMediaQuery,
+   useBreakpoints,
+   breakpointsTailwind, 
+} from 'sveltuse'
+
+const { count, inc, dec, set, reset } = useCounter(1, { min: 0, max: 100 })
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+const isLargeScreen = useMediaQuery('(min-width: 1024px)')
+const isPreferredDark = useMediaQuery('(prefers-color-scheme: dark)')
+
+```
 
 <p>
     <a href="https://flowbite-svelte.com" >
