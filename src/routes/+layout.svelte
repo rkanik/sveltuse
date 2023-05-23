@@ -22,6 +22,7 @@
 	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
 	import NavSidebarHamburger from 'components/navbar/NavSidebarHamburger.svelte'
 	import DarkMode from 'components/darkmode/DarkMode.svelte'
+	import Icon from '@iconify/svelte'
 
 	export let data: LayoutData
 
@@ -107,6 +108,13 @@
 				name="View on GitHub"
 				href="https://github.com/rkanik/sveltuse">
 				<GitHub />
+			</ToolbarLink>
+
+			<ToolbarLink
+				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
+				name="View on Npm"
+				href="https://www.npmjs.com/package/sveltuse">
+				<Icon icon="eva:npm-outline" class="text-2xl" />
 			</ToolbarLink>
 			<!-- <ToolbarLink
 				class="hidden xl:inline-block dark:hover:text-white hover:text-gray-900"
