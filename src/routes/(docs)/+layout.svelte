@@ -11,7 +11,8 @@
 		SidebarItem,
 		SidebarGroup,
 		SidebarWrapper,
-		SidebarDropdownWrapper
+		SidebarDropdownWrapper,
+		Button
 	} from 'flowbite-svelte'
 
 	export let data
@@ -26,7 +27,7 @@
 			(dropdowns, group) => ({
 				...dropdowns,
 				[group.label]: group.items.some((item) => {
-					return item.href === $page.url.pathname
+					return $page.url.pathname.startsWith(item.href)
 				})
 			}),
 			{} as { [label: string]: boolean }
@@ -81,7 +82,7 @@
 							<SidebarItem
 								href={item.href}
 								label={item.hrefText || item.title}
-								active={item.href === $page.url.pathname}
+								active={$page.url.pathname.startsWith(item.href)}
 								spanClass=""
 								aClass="transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-900 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white"
 								activeClass="relative flex items-center flex-wrap font-medium cursor-default text-primary-700 dark:text-primary-700" />
@@ -103,3 +104,17 @@
 	class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
 	<slot />
 </main>
+
+{#if import.meta.env.DEV}
+	<Button
+		href={$page.url.pathname.endsWith('/demo')
+			? $page.url.pathname.replace('/demo', '')
+			: $page.url.pathname + '/demo'}
+		pill
+		class="fixed bottom-4 right-8 !p-3"
+		><Icon
+			class="text-2xl"
+			icon={$page.url.pathname.endsWith('/demo')
+				? 'bx:book'
+				: 'gg:debug'} /></Button>
+{/if}

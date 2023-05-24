@@ -1,22 +1,3 @@
----
-id: 1
-layout: PostLayout
-
-# Sidebar link
-href: /core/useEyeDropper
-hrefText:
-
-# Heading
-title: useEyeDropper
-description:
----
-
-Reactive [EyeDropper API](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper_API)<br/>
-Ported from [vueuse/useEyeDropper](https://vueuse.org/core/useEyeDropper)
-
-## Usage
-
-```svelte example
 <script lang="ts">
 	import Icon from '@iconify/svelte'
 
@@ -40,5 +21,3 @@ Ported from [vueuse/useEyeDropper](https://vueuse.org/core/useEyeDropper)
 	</div>
 	<Button class="mt-4" on:click={() => open()}>Open Eye Dropper</Button>
 </div>
-
-```

@@ -1,10 +1,10 @@
-const json = (r: Response) => r.json()
+// const json = (r: Response) => r.json()
 
 /** @type {import('./$types').PageServerLoad} */
 export const load = async ({ fetch }) => {
 	try {
 		// const githubAPI = 'https://api.github.com/repos/rkanik/sveluse'
-		const posts = await fetch('/api/posts').then(json)
+		// const posts = await fetch('/api/posts').then(json)
 		// const github = await fetch(githubAPI).then(json)
 		// const contributors = await fetch(
 		// 	githubAPI + '/contributors?per_page=21'
@@ -18,7 +18,7 @@ export const load = async ({ fetch }) => {
 		// ).then(json)
 
 		return {
-			posts,
+			// posts,
 			contributors: null, //Array.isArray(contributors) ? contributors : null,
 			github: null,
 			npm: null,

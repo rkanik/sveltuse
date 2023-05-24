@@ -8,6 +8,5 @@ export const handle = async ({ event, resolve }) => {
 	if (redirectPathname) {
 		return Response.redirect(redirectPathname, 301)
 	}
-
 	return await resolve(event)
 }

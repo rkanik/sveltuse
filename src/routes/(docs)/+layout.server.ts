@@ -26,7 +26,7 @@ export async function load() {
 			{
 				label: 'Guide',
 				items: await getPostsFromMarkdowns(
-					import.meta.glob<Mdsvex>('./[type]/*.md')
+					import.meta.glob<Mdsvex>('/src/md/guide/*.md')
 				)
 			},
 			{

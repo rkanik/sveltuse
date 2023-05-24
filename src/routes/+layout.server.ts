@@ -1,4 +1,3 @@
-/** @type {import('./$types').LayoutServerLoad} */
 export const load = async ({ fetch }) => {
 	try {
 		const url =
