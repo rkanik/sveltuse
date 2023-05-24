@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from 'flowbite-svelte'
+
+	import Icon from '@iconify/svelte'
 	import CopyCliboardInput from '../utils/CopyCliboardInput.svelte'
-	import ArrowRight from '../utils/icons/ArrowRight.svelte'
 </script>
 
 <section
@@ -33,7 +34,9 @@
 								class="gap-2 max-w-sm md:w-fit whitespace-nowrap hover:bg-primary-800"
 								href="/introduction"
 								color="primary">
-								Get started <ArrowRight />
+								Get started <Icon
+									class="text-xl"
+									icon="mdi-arrow-right" />
 							</Button>
 						</div>
 					</div>

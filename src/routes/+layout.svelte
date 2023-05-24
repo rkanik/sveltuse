@@ -16,7 +16,6 @@
 
 	import Icon from '@iconify/svelte'
 	import DocBadge from './utils/DocBadge.svelte'
-	import GitHub from './utils/icons/GitHub.svelte'
 	import ToolbarLink from './utils/ToolbarLink.svelte'
 	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
 	import DarkMode from 'components/darkmode/DarkMode.svelte'
@@ -110,7 +109,7 @@
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on GitHub"
 				href="https://github.com/rkanik/sveltuse">
-				<GitHub />
+				<Icon icon="mdi-github" />
 			</ToolbarLink>
 
 			<ToolbarLink

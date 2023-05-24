@@ -2,16 +2,13 @@ import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 import examples from 'mdsvexamples'
 
 const config = defineConfig({
-	layout: {
-		PostLayout: './src/layouts/PostLayout.svelte',
-		componentLayout: './src/routes/layouts/component/+page.svelte'
-	},
 	extensions: ['.svelte.md', '.md', '.svx'],
-
+	layout: {
+		PostLayout: './src/layouts/PostLayout.svelte'
+	},
 	smartypants: {
 		dashes: 'oldschool'
 	},
-
 	remarkPlugins: [
 		[
 			examples,
