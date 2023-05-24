@@ -29,6 +29,7 @@ const config = {
 			}
 		}),
 		alias: {
+			[`app/*`]: 'src/app/*',
 			[`sveltuse`]: 'src/lib',
 			[`sveltuse/*`]: 'src/lib/*',
 			[`components/*`]: 'src/components/*'

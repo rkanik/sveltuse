@@ -83,7 +83,7 @@
 		<div class="flex items-center justify-center px-4 text-center">
 			<FooterCopyright
 				href="/"
-				by="Flowbite™"
+				by="Sveltuse™"
 				copyrightMessage="is a registered trademark. All Rights Reserved." />
 		</div>
 	</div>

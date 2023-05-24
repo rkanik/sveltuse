@@ -1,37 +1,34 @@
 <script lang="ts">
+	import '../app.css'
+
 	import { page } from '$app/stores'
 	import {
 		NavUl,
 		NavLi,
-		NavHamburger,
-		NavBrand,
+		Navbar,
 		Tooltip,
-		// DarkMode,
-		Navbar
+		NavBrand,
+		NavHamburger
 	} from 'flowbite-svelte'
 
 	import { setContext } from 'svelte'
 	import { writable, type Writable } from 'svelte/store'
-	import '../app.css'
-	import DocBadge from './utils/DocBadge.svelte'
-	// import Discord from './utils/icons/Discord.svelte'
-	import GitHub from './utils/icons/GitHub.svelte'
-	// import YouTube from './utils/icons/YouTube.svelte'
-	import ToolbarLink from './utils/ToolbarLink.svelte'
-	import type { LayoutData } from './$types'
-	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
-	import NavSidebarHamburger from 'components/navbar/NavSidebarHamburger.svelte'
-	import DarkMode from 'components/darkmode/DarkMode.svelte'
-	import Icon from '@iconify/svelte'
 
-	export let data: LayoutData
+	import Icon from '@iconify/svelte'
+	import DocBadge from './utils/DocBadge.svelte'
+	import GitHub from './utils/icons/GitHub.svelte'
+	import ToolbarLink from './utils/ToolbarLink.svelte'
+	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
+	import DarkMode from 'components/darkmode/DarkMode.svelte'
+	import NavSidebarHamburger from 'components/navbar/NavSidebarHamburger.svelte'
+
+	export let data
 
 	let isHomePage: boolean
 	$: isHomePage = $page.route.id === '/'
 
 	let version = data.package.version ?? 'N/A'
 
-	$: activeUrl = $page.url.pathname
 	let logo = '/images/flowbite-svelte-icon-logo.svg'
 	let divClass = 'w-full ml-auto lg:block lg:w-auto order-1 lg:order-none'
 	let ulClass =
@@ -43,6 +40,25 @@
 	const toggleDrawer = () => {
 		drawerHiddenStore.update((state) => !state)
 	}
+
+	const items = [
+		{
+			href: '/',
+			text: 'Home'
+		},
+		{
+			href: '/introduction',
+			text: 'Quickstart'
+		},
+		{
+			href: '/core/useCounter',
+			text: 'Functions'
+		},
+		{
+			href: '/integrations/usePDF',
+			text: 'Integrations'
+		}
+	]
 </script>
 
 <header
@@ -79,27 +95,14 @@
 			on:click={() => setTimeout(toggle, 1)}
 			nonActiveClass="md:!pl-3 md:!py-2 lg:!pl-0 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-gray-400 lg:dark:text-white lg:dark:hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
 			activeClass="md:!pl-3 md:!py-2 lg:!pl-0 text-white bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:dark:text-primary-700 dark:bg-primary-600 lg:dark:bg-transparent cursor-default">
-			<NavLi class="lg:px-2 lg:mb-0" active={activeUrl === '/'} href="/"
-				>Home</NavLi>
-			<NavLi
-				class="lg:px-2 lg:mb-0"
-				active={activeUrl.startsWith('/docs/pages/introduction')}
-				href="/docs/pages/introduction">Docs</NavLi>
-			<NavLi
-				class="lg:px-2 lg:mb-0"
-				active={activeUrl.startsWith('/docs/pages/quickstart')}
-				href="/docs/pages/quickstart">Quickstart</NavLi>
-			<NavLi
-				class="lg:px-2 lg:mb-0"
-				active={activeUrl.startsWith('/docs/functions/accordion')}
-				href="/docs/functions/accordion">Functions</NavLi>
-			<!-- <NavLi
-				class="lg:px-2 lg:mb-0"
-				active={activeUrl.startsWith('/figma')}
-				href="https://flowbite.com/figma/">Figma</NavLi>
-			<NavLi
-				class="lg:px-2 lg:mb-0"
-				href="https://flowbite-svelte-blocks.vercel.app/">Blocks</NavLi> -->
+			{#each items as item}
+				<NavLi
+					class="lg:px-2 lg:mb-0"
+					active={item.href === $page.url.pathname}
+					href={item.href}>
+					{item.text}
+				</NavLi>
+			{/each}
 		</NavUl>
 
 		<div class="flex items-center ml-auto">

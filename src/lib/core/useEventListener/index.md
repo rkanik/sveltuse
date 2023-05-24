@@ -1,15 +1,19 @@
 ---
-layout: componentLayout
-breadcrumb_title: useEventListener
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useEventListener
+hrefText:
+
+# Heading
 title: useEventListener
-component_title: useEventListener
-dir: Integrations
+description:
 ---
 
 Use EventListener with ease. Register using [addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on mounted, and [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener) automatically on unmounted.
 
 This implementation is original ported from [vueuse/useEventListener](https://vueuse.org/core/useEventListener)
-
 
 ## Usage
 
@@ -51,6 +55,7 @@ This implementation is original ported from [vueuse/useEventListener](https://vu
 ```
 
 ## Usage 2
+
 All the event listeners will be automatically removed if the target `change` or on `onDestroy`.
 
 ```svelte example

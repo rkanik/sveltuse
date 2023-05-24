@@ -1,12 +1,15 @@
 ---
-layout: componentLayout
-breadcrumb_title: useBreakpoints
-title: useBreakpoints
-component_title: useBreakpoints
-dir: Integrations
----
+id: 1
+layout: PostLayout
 
-Reactive viewport breakpoints.
+# Sidebar link
+href: /core/useBreakpoints
+hrefText:
+
+# Heading
+title: useBreakpoints
+description: Reactive viewport breakpoints.
+---
 
 This implementation is original ported from [vueuse/useBreakpoints](https://vueuse.org/core/useBreakpoints)
 

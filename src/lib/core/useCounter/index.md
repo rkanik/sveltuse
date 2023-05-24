@@ -1,9 +1,13 @@
 ---
-layout: componentLayout
-breadcrumb_title: useCounter
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useCounter
+hrefText:
+
+# Heading
 title: useCounter
-component_title: useCounter
-dir: Integrations
 description: Basic counter with utility functions.
 ---
 

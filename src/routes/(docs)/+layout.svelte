@@ -21,19 +21,25 @@
 		drawerHidden.set(true)
 	}
 
-	const dropdowns = data.groups.reduce(
-		(dropdowns, group) => ({
-			...dropdowns,
-			[group.label]: group.items.some((item) => {
-				return item.href === $page.url.pathname
-			})
-		}),
-		{} as { [label: string]: boolean }
-	)
+	const getDropdowns = () => {
+		return data.postGroups.reduce(
+			(dropdowns, group) => ({
+				...dropdowns,
+				[group.label]: group.items.some((item) => {
+					return item.href === $page.url.pathname
+				})
+			}),
+			{} as { [label: string]: boolean }
+		)
+	}
+
+	let dropdowns = getDropdowns()
 
 	afterNavigate((navigation) => {
 		document.getElementById('svelte')?.scrollTo({ top: 0 })
 		closeDrawer()
+
+		dropdowns = getDropdowns()
 
 		// const pathname = navigation.to?.url.pathname ?? ''
 
@@ -51,7 +57,7 @@
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-0 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-8rem)] lg:block dark:bg-gray-900 lg:mr-0 lg:sticky top-20">
 		<nav class="font-normal text-base lg:text-sm">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4">
-				{#each data.groups as group}
+				{#each data.postGroups as group}
 					<SidebarDropdownWrapper
 						bind:isOpen={dropdowns[group.label]}
 						label={group.label}

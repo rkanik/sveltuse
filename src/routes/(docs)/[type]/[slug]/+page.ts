@@ -1,13 +1,16 @@
-export async function load({ params }) {
-	const post = await import(
-		`../../../../lib/${params.type}/${params.slug}/index.md`
-	)
+import { error } from '@sveltejs/kit'
 
-	const { title, dir } = post.metadata
-	const content = post.default
-	return {
-		content,
-		title,
-		dir
+export async function load({ params }) {
+	try {
+		const post = await import(
+			`../../../../lib/${params.type}/${params.slug}/index.md`
+		)
+		return {
+			content: post.default
+		}
+	} catch (err: any) {
+		throw error(404, {
+			message: err.message || 'Page not found!'
+		})
 	}
 }

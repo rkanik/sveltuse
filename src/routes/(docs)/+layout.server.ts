@@ -1,15 +1,7 @@
 import type Mdsvex from '*.md'
+import type { Post } from 'app/types'
 
 type Markdowns = Record<string, () => Promise<Mdsvex>>
-
-type Post = {
-	id: number
-	href: string
-	hrefText: string | null
-
-	title: string
-	description: string | null
-}
 
 const getPostsFromMarkdowns = async (markdowns: Markdowns) => {
 	return (
@@ -29,23 +21,25 @@ const getPostsFromMarkdowns = async (markdowns: Markdowns) => {
 }
 
 export async function load() {
-	const guides = await getPostsFromMarkdowns(
-		import.meta.glob<Mdsvex>('./[type]/*.md')
-	)
-
-	const cores = await getPostsFromMarkdowns(
-		import.meta.glob<Mdsvex>('/src/lib/core/*/*.md')
-	)
-
 	return {
-		groups: [
+		postGroups: [
 			{
 				label: 'Guide',
-				items: guides
+				items: await getPostsFromMarkdowns(
+					import.meta.glob<Mdsvex>('./[type]/*.md')
+				)
 			},
 			{
 				label: 'Core Functions',
-				items: cores
+				items: await getPostsFromMarkdowns(
+					import.meta.glob<Mdsvex>('/src/lib/core/*/*.md')
+				)
+			},
+			{
+				label: 'Integrations',
+				items: await getPostsFromMarkdowns(
+					import.meta.glob<Mdsvex>('/src/lib/integrations/*/*.md')
+				)
 			}
 		]
 	}

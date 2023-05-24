@@ -1,9 +1,13 @@
 ---
-layout: componentLayout
-breadcrumb_title: useMounted
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useMounted
+hrefText:
+
+# Heading
 title: useMounted
-component_title: useMounted
-dir: Integrations
 description: Reactive isMounted variable.
 ---
 
@@ -31,6 +35,6 @@ import { onMount } from 'svelte'
 let isMounted = false
 
 onMount(() => {
-  isMounted = true
+	isMounted = true
 })
 ```

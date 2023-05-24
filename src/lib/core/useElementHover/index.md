@@ -1,9 +1,14 @@
 ---
-layout: componentLayout
-breadcrumb_title: useElementHover
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useElementHover
+hrefText:
+
+# Heading
 title: useElementHover
-component_title: useElementHover
-dir: Integrations
+description:
 ---
 
 Reactive element's hover state.

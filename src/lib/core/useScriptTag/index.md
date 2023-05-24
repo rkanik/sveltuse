@@ -1,9 +1,13 @@
 ---
-layout: componentLayout
-breadcrumb_title: useScriptTag
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useScriptTag
+hrefText:
+
+# Heading
 title: useScriptTag
-component_title: useScriptTag
-dir: Integrations
 description: Script tag injecting.
 ---
 
@@ -28,6 +32,7 @@ This implementation is original ported from [vueuse/useScriptTag](https://vueuse
 The script will be automatically loaded on the component mounted and removed when the component on unmounting.
 
 ## Configurations
+
 Set `manual: true` to have manual control over the timing to load the script.
 
 ```svelte example

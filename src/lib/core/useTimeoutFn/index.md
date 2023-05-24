@@ -1,9 +1,14 @@
 ---
-layout: componentLayout
-breadcrumb_title: useTimeoutFn
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useTimeoutFn
+hrefText:
+
+# Heading
 title: useTimeoutFn
-component_title: useTimeoutFn
-dir: Integrations
+description:
 ---
 
 Wrapper for `setTimeout` with controls.

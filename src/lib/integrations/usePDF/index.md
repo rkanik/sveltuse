@@ -1,9 +1,13 @@
 ---
-layout: componentLayout
-breadcrumb_title: usePDF
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /integrations/usePDF
+hrefText:
+
+# Heading
 title: usePDF
-component_title: usePDF
-dir: Integrations
 description: Render PDF using `pdfjs-dist`.
 ---
 

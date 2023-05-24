@@ -26,7 +26,7 @@
 				<Button
 					size="lg"
 					class="gap-2 sm:max-w-sm w-full md:w-fit whitespace-nowrap hover:bg-primary-800"
-					href="/docs/functions/useCounter"
+					href="/core/useCounter"
 					color="primary">
 					See our docs <ArrowRight />
 				</Button>

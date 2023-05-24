@@ -1,9 +1,13 @@
 ---
-layout: componentLayout
-breadcrumb_title: useObjectUrl
+id: 1
+layout: PostLayout
+
+# Sidebar link
+href: /core/useObjectUrl
+hrefText:
+
+# Heading
 title: useObjectUrl
-component_title: useObjectUrl
-dir: Integrations
 description: Reactive URL representing an object.
 ---
 
@@ -12,6 +16,7 @@ Creates an URL for the provided `File`, `Blob`, or `MediaSource` via [URL.create
 This implementation is original ported from [vueuse/useObjectUrl](https://vueuse.org/core/useObjectUrl)
 
 ## Usage
+
 ```svelte example
 <script lang="ts">
 	import { writable } from 'svelte/store'
