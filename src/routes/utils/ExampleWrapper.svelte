@@ -39,6 +39,7 @@
 
 	let node: HTMLElement
 	$: {
+		console.log('Example wrapper', path, meta)
 		if (node) {
 			// find closes previous section anchor
 			const section = [

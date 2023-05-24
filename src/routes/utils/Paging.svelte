@@ -11,7 +11,7 @@
 		params: { slug }
 	} = $page
 
-	const components = Object.values(data.posts)
+	const components = Object.values(data.posts || {})
 		.flatMap(identity)
 		.filter((x) => x.meta.dir === data.dir)
 		.map(({ path, meta }) => ({ path, name: meta.component_title }))

@@ -51,6 +51,10 @@
 
 	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]))
 
+	$: {
+		console.log(dropdowns)
+	}
+
 	// onMount(() => {
 	// 	console.log(data)
 	// })
