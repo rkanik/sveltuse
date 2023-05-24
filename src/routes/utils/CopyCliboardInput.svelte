@@ -1,7 +1,8 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte'
 	import { Input, Tooltip } from 'flowbite-svelte'
-	import Check from './icons/Check.svelte'
-	import Clipboard from './icons/Clipboard.svelte'
+	// import Check from './icons/Check.svelte'
+	// import Clipboard from './icons/Clipboard.svelte'
 
 	const show = ({ detail }: { detail: boolean }) =>
 		detail || set_tooltip(false)
@@ -47,7 +48,8 @@
 		<button
 			on:click={copyToClipboard}
 			class="hover:text-primary-700 py-2 px-1">
-			{#if tooltip_text == text_not_copied}<Clipboard />{:else}<Check />{/if}
+			{#if tooltip_text == text_not_copied}<Icon
+					icon="tabler:clipboard" />{:else}<Icon icon="fe:check" />{/if}
 		</button>
 
 		<Tooltip bind:open on:show={show}>{tooltip_text}</Tooltip>

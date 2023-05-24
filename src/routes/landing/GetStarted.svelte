@@ -1,8 +1,9 @@
 <script>
 	import { Button } from 'flowbite-svelte'
-	import CopyCliboardInput from '../utils/CopyCliboardInput.svelte'
-	import ArrowRight from '../utils/icons/ArrowRight.svelte'
+
+	import Icon from '@iconify/svelte'
 	import Section from './utils/Section.svelte'
+	import CopyCliboardInput from '../utils/CopyCliboardInput.svelte'
 </script>
 
 <Section tinted class="lg:py-24">
@@ -26,9 +27,9 @@
 				<Button
 					size="lg"
 					class="gap-2 sm:max-w-sm w-full md:w-fit whitespace-nowrap hover:bg-primary-800"
-					href="/docs/functions/useCounter"
+					href="/core/useCounter"
 					color="primary">
-					See our docs <ArrowRight />
+					See our docs <Icon class="text-xl" icon="mdi-arrow-right" />
 				</Button>
 			</div>
 		</div>

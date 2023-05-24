@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { Button } from 'flowbite-svelte'
+
+	import Icon from '@iconify/svelte'
 	import CopyCliboardInput from '../utils/CopyCliboardInput.svelte'
-	import ArrowRight from '../utils/icons/ArrowRight.svelte'
 </script>
 
 <section
@@ -20,8 +21,8 @@
 					</h1>
 					<p
 						class="text-lg lg:text-xl leading-normal text-gray-500 dark:text-gray-400 max-w-2xl">
-						Sveltuse is a collection of Essential Svelte and
-						Sveltekit Composition Utilities
+						Sveltuse is a collection of Essential Svelte and Sveltekit
+						Composition Utilities
 					</p>
 					<div
 						class="mt-4 md:mt-5 sm:flex justify-center sm:justify-start">
@@ -31,9 +32,11 @@
 							<Button
 								size="lg"
 								class="gap-2 max-w-sm md:w-fit whitespace-nowrap hover:bg-primary-800"
-								href="/docs/pages/quickstart"
+								href="/introduction"
 								color="primary">
-								Get started <ArrowRight />
+								Get started <Icon
+									class="text-xl"
+									icon="mdi-arrow-right" />
 							</Button>
 						</div>
 					</div>
