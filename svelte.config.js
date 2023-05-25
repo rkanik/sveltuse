@@ -8,10 +8,11 @@ import preprocess from 'svelte-preprocess'
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	preprocess: [
+		mdsvex(mdsvexConfig),
 		preprocess({
-			postcss: true
-		}),
-		mdsvex(mdsvexConfig)
+			postcss: true,
+			preserve: ['ld+json']
+		})
 	],
 	vitePlugin: {
 		inspector: {
