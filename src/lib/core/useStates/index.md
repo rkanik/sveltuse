@@ -25,7 +25,7 @@ currentColor.set('green')
 
 Here `as const` is important for better auto complete. Access the `currentColor` reactive variable with `$currentColor`
 
-Or using enum
+Or using `object` / `enum`
 
 ```ts
 enum Status {
