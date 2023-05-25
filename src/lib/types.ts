@@ -72,6 +72,12 @@ export interface Stoppable<StartFnArgs extends any[] = any[]> {
 	start: (...args: StartFnArgs) => void
 }
 
+export type ArgumentsType<T> = T extends (...args: infer U) => any ? U : never
+
+export type PromisifyFn<T extends AnyFn> = (
+	...args: ArgumentsType<T>
+) => Promise<ReturnType<T>>
+
 export type Pausable = {
 	/**
 	 * A ref indicate whether a pausable instance is active

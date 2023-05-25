@@ -18,8 +18,6 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"prepublishOnly": "npm run package && publint",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
@@ -27,8 +25,9 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"write-package-json": "node ./scripts/package-json-writer.js",
 		"add-exports": "node ./scripts/add-exports-to-package-json.js",
-		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm publish",
-		"gen:props": "createprops"
+		"gen:props": "createprops",
+		"package": "svelte-kit sync && svelte-package && publint",
+		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm publish"
 	},
 	"dependencies": {
 		"@docsearch/js": "^3.3.4",
@@ -96,12 +95,6 @@
 		"npm": ">=7.0.0",
 		"node": ">=16.0.0"
 	},
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		}
-	},
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",
@@ -112,5 +105,91 @@
 	"contributors": [
 		"RK Anik <rkanik.me@gmail.com>"
 	],
-	"license": "MIT"
+	"license": "MIT",
+	"exports": {
+		"./useBreakpoints": {
+			"types": "./dist/core/useBreakpoints/index.d.ts",
+			"svelte": "./dist/core/useBreakpoints/index.js"
+		},
+		"./useClipboard": {
+			"types": "./dist/core/useClipboard/index.d.ts",
+			"svelte": "./dist/core/useClipboard/index.js"
+		},
+		"./useCounter": {
+			"types": "./dist/core/useCounter/index.d.ts",
+			"svelte": "./dist/core/useCounter/index.js"
+		},
+		"./useDropZone": {
+			"types": "./dist/core/useDropZone/index.d.ts",
+			"svelte": "./dist/core/useDropZone/index.js"
+		},
+		"./useElementHover": {
+			"types": "./dist/core/useElementHover/index.d.ts",
+			"svelte": "./dist/core/useElementHover/index.js"
+		},
+		"./useEventListener": {
+			"types": "./dist/core/useEventListener/index.d.ts",
+			"svelte": "./dist/core/useEventListener/index.js"
+		},
+		"./useEyeDropper": {
+			"types": "./dist/core/useEyeDropper/index.d.ts",
+			"svelte": "./dist/core/useEyeDropper/index.js"
+		},
+		"./useIntersectionObserver": {
+			"types": "./dist/core/useIntersectionObserver/index.d.ts",
+			"svelte": "./dist/core/useIntersectionObserver/index.js"
+		},
+		"./useIntersectionObserver2": {
+			"types": "./dist/core/useIntersectionObserver2/index.d.ts",
+			"svelte": "./dist/core/useIntersectionObserver2/index.js"
+		},
+		"./useIsSupported": {
+			"types": "./dist/core/useIsSupported/index.d.ts",
+			"svelte": "./dist/core/useIsSupported/index.js"
+		},
+		"./useMediaQuery": {
+			"types": "./dist/core/useMediaQuery/index.d.ts",
+			"svelte": "./dist/core/useMediaQuery/index.js"
+		},
+		"./useMounted": {
+			"types": "./dist/core/useMounted/index.d.ts",
+			"svelte": "./dist/core/useMounted/index.js"
+		},
+		"./useMouse": {
+			"types": "./dist/core/useMouse/index.d.ts",
+			"svelte": "./dist/core/useMouse/index.js"
+		},
+		"./useObjectUrl": {
+			"types": "./dist/core/useObjectUrl/index.d.ts",
+			"svelte": "./dist/core/useObjectUrl/index.js"
+		},
+		"./usePermission": {
+			"types": "./dist/core/usePermission/index.d.ts",
+			"svelte": "./dist/core/usePermission/index.js"
+		},
+		"./useResizeObserver": {
+			"types": "./dist/core/useResizeObserver/index.d.ts",
+			"svelte": "./dist/core/useResizeObserver/index.js"
+		},
+		"./useScriptTag": {
+			"types": "./dist/core/useScriptTag/index.d.ts",
+			"svelte": "./dist/core/useScriptTag/index.js"
+		},
+		"./useSupported": {
+			"types": "./dist/core/useSupported/index.d.ts",
+			"svelte": "./dist/core/useSupported/index.js"
+		},
+		"./useTimeoutFn": {
+			"types": "./dist/core/useTimeoutFn/index.d.ts",
+			"svelte": "./dist/core/useTimeoutFn/index.js"
+		},
+		"./usePDF": {
+			"types": "./dist/integrations/usePDF/index.d.ts",
+			"svelte": "./dist/integrations/usePDF/index.js"
+		},
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js"
+		}
+	}
 }

@@ -116,7 +116,7 @@
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on Npm"
 				href="https://www.npmjs.com/package/sveltuse">
-				<Icon class="text-2xl" icon="eva:npm-outline"  />
+				<Icon class="text-2xl" icon="eva:npm-outline" />
 			</ToolbarLink>
 			<!-- <ToolbarLink
 				class="hidden xl:inline-block dark:hover:text-white hover:text-gray-900"

@@ -6,7 +6,7 @@ import getStoreValue from '../getStoreValue'
  */
 export default function toValue<T>(r: MaybeGetter<T>): T {
 	if (typeof r === 'function') {
-		return (r as AnyFn)()
+		return toValue((r as AnyFn)())
 	}
 
 	if (typeof r === 'object' && r !== null && 'subscribe' in r) {
