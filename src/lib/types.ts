@@ -10,7 +10,7 @@ export type AnyFn = (...args: any[]) => any
 
 export type Store<T> = Writable<T> | Readable<T>
 
-export type MaybeGetter<T> = T | Store<T> | (() => T)
+export type MaybeGetter<T, A = undefined> = T | Store<T> | ((...args: A[]) => T)
 
 export type MaybeArray<T> = T | T[]
 

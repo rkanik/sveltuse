@@ -9,6 +9,7 @@ hrefText:
 # Heading
 title: useToggle
 description: A boolean switcher with utility functions.
+related: useStates
 ---
 
 ## Example
