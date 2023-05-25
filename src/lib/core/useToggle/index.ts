@@ -1,6 +1,6 @@
 // Ported from https://vueuse.org/useToggle
 
-import type { MaybeGetter, Store } from 'sveltuse/types'
+import type { MaybeGetter } from 'sveltuse/types'
 
 import { writable, type Readable } from 'svelte/store'
 import toValue from 'sveltuse/utils/toValue'
