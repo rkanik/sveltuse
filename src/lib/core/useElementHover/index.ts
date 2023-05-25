@@ -16,6 +16,7 @@ export function useElementHover(
 	el: MaybeGetter<EventTarget | null | undefined>,
 	options: UseElementHoverOptions = {}
 ): Readable<boolean> {
+	console.log('useElementHover', el)
 	const { delayEnter = 0, delayLeave = 0, window = defaultWindow } = options
 
 	const isHovered = writable(false)

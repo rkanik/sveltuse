@@ -109,14 +109,14 @@
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on GitHub"
 				href="https://github.com/rkanik/sveltuse">
-				<Icon icon="mdi-github" />
+				<Icon class="text-2xl" icon="mdi-github" />
 			</ToolbarLink>
 
 			<ToolbarLink
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on Npm"
 				href="https://www.npmjs.com/package/sveltuse">
-				<Icon icon="eva:npm-outline" class="text-2xl" />
+				<Icon class="text-2xl" icon="eva:npm-outline"  />
 			</ToolbarLink>
 			<!-- <ToolbarLink
 				class="hidden xl:inline-block dark:hover:text-white hover:text-gray-900"

@@ -18,7 +18,7 @@ export const dElementHover = (
 	const callback = typeof binding === 'function' ? binding : binding.callback
 
 	const isHovered = useElementHover(
-		el,
+		() => el,
 		typeof binding !== 'function'
 			? {
 					window: binding.window,

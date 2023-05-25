@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte'
 	// import { onMount } from 'svelte'
 	// import { page } from '$app/stores'
 	import { Tooltip } from 'flowbite-svelte'
@@ -110,19 +111,11 @@
 						<button
 							on:click={onClickCopy}
 							type="button"
-							class="flex items-center px-3 py-2 text-xs font-medium text-gray-600 bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:text-gray-400 dark:bg-gray-800 hover:text-primary-700 dark:hover:text-white copy-to-clipboard-button">
-							<svg
-								class="w-4 h-4 mr-2"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-								xmlns="http://www.w3.org/2000/svg"
-								><path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
-							{$copied ? 'Copied' : 'Copy'}
+							class="flex items-center px-3 py-2 text-sm font-medium bg-gray-100 border-l border-gray-200 dark:border-gray-600 dark:bg-gray-800 copy-to-clipboard-button space-x-1 {$copied
+								? 'text-primary-500'
+								: 'text-gray-600 dark:text-gray-400 hover:text-primary-700 dark:hover:text-white'}">
+							<Icon icon="mdi-content-copy" />
+							<span>{$copied ? 'Copied' : 'Copy'}</span>
 						</button>
 						<Tooltip placement="bottom-end">Copy to clipboard.</Tooltip>
 					{/if}

@@ -5,7 +5,6 @@ export async function load({ params }) {
 	const possibleDemos = [...Array(100).keys()].map((i) => i + 1)
 
 	for (const index of possibleDemos) {
-		console.log('possibleDemos', index)
 		try {
 			const component = await import(
 				`../../../../../lib/${params.type}/${params.slug}/demo${

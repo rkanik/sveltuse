@@ -8,12 +8,13 @@
 
 <script>
 	import { page } from '$app/stores'
+	import { Toc } from '../routes/utils'
 	import { MetaTags } from 'svelte-meta-tags'
 	import { Heading, PaginationItem } from 'flowbite-svelte'
 
 	import Icon from '@iconify/svelte'
+	import H2 from 'components/tags/H2.svelte'
 	import Footer from '../routes/utils/Footer.svelte'
-	import { Toc } from '../routes/utils'
 
 	export let id = ''
 	export let layout = ''
@@ -21,8 +22,6 @@
 	export let hrefText = ''
 	export let title = ''
 	export let description = ''
-
-	$: id, layout, href, hrefText
 
 	function extract(x) {
 		if (x.firstElementChild)
@@ -32,6 +31,25 @@
 				name: x?.firstChild?.nodeValue ?? ''
 			}
 		return { name: '' }
+	}
+
+	let githubLinks = []
+	$: {
+		id, layout, href, hrefText
+		githubLinks = [
+			{
+				label: 'Source',
+				href: `https://github.com/rkanik/sveltuse/tree/main/src/lib${href}/index.ts`
+			},
+			{
+				label: 'Demo',
+				href: `https://github.com/rkanik/sveltuse/tree/main/src/lib${href}/demo.svelte`
+			},
+			{
+				label: 'Docs',
+				href: `https://github.com/rkanik/sveltuse/tree/main/src/lib${href}/index.md`
+			}
+		]
 	}
 
 	const posts = $page.data.postGroups.reduce((posts, group) => {
@@ -57,7 +75,26 @@
 
 		<div id="mainContent" class="py-8">
 			<slot />
-			<div class="flex flex-col items-start gap-4 py-4">
+
+			{#if ['/core', '/integrations'].some( (path) => $page.url.pathname.startsWith(path) )}
+				<H2>Source</H2>
+				<div class="flex items-center space-x-1">
+					{#each githubLinks as link, index}
+						{#if index > 0}
+							<span> • </span>
+						{/if}
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href={link.href}
+							class="text-primary-500 hover:underline">
+							{link.label}
+						</a>
+					{/each}
+				</div>
+			{/if}
+
+			<div class="flex flex-col items-start gap-4 py-4 mt-4 2xl:mt-8">
 				{#if index >= 0}
 					<div class="flex flex-row justify-between gap-2.5 self-stretch">
 						{#if index > 0}
