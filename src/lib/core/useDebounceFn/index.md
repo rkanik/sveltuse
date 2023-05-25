@@ -9,6 +9,7 @@ hrefText:
 # Heading
 title: useDebounceFn
 description: Debounce execution of a function.
+related: useThrottleFn
 ---
 
 > Debounce is an overloaded waiter: if you keep asking him your requests will be ignored until you stop and give him some time to think about your latest inquiry.

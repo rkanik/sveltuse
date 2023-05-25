@@ -10,7 +10,7 @@
 	import { page } from '$app/stores'
 	import { Toc } from '../routes/utils'
 	import { MetaTags } from 'svelte-meta-tags'
-	import { Heading, PaginationItem } from 'flowbite-svelte'
+	import { Badge, Heading, PaginationItem } from 'flowbite-svelte'
 
 	import Icon from '@iconify/svelte'
 	import H2 from 'components/tags/H2.svelte'
@@ -23,6 +23,7 @@
 	export let hrefText = ''
 	export let title = ''
 	export let description = ''
+	export let related = ''
 
 	function extract(x) {
 		if (x.firstElementChild)
@@ -60,6 +61,19 @@
 	const index = posts.findIndex((post) => {
 		return post.href === $page.url.pathname
 	})
+
+	let relatedPosts = []
+	$: if (related) {
+		relatedPosts = related
+			.split(',')
+			.map((v) => v.trim())
+			.map((name) => {
+				return posts.find((post) => {
+					return post.href.endsWith(name)
+				})
+			})
+			.filter(Boolean)
+	}
 </script>
 
 <MetaTags {title} {description} titleTemplate="%s - Sveltuse" />
@@ -76,6 +90,17 @@
 			</Heading>
 			{#if description}
 				<CompoDescription>{description}</CompoDescription>
+			{/if}
+			{#if relatedPosts.length}
+				<div class="flex flex-wrap space-x-1 mt-2">
+					<span>See also:</span>
+					{#each relatedPosts as post}
+						<Badge>
+							<a href={post.href} class="hover:underline"
+								>{post.hrefText || post.title}</a>
+						</Badge>
+					{/each}
+				</div>
 			{/if}
 		</div>
 
