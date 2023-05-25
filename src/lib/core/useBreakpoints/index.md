@@ -9,6 +9,7 @@ hrefText:
 # Heading
 title: useBreakpoints
 description: Reactive viewport breakpoints.
+related: useMediaQuery
 ---
 
 This implementation is original ported from [vueuse/useBreakpoints](https://vueuse.org/core/useBreakpoints)
