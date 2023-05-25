@@ -307,6 +307,12 @@ export default function usePDF(options: UsePDFOptions) {
 		}
 	}
 
+	const setPageNumber = (number: number) => {
+		if (number > 0 && number <= getNumPages()) {
+			onSetPageNumber(number)
+		}
+	}
+
 	const onChangeScale = () => {
 		pages.forEach((page) => {
 			if (page?.isRendered) {
@@ -396,6 +402,7 @@ export default function usePDF(options: UsePDFOptions) {
 		pageNumbers,
 		goToNextPage,
 		goToPreviousPage,
+		setPageNumber,
 		pageRenderer,
 		thumbnailRenderer,
 		zoomIn,
