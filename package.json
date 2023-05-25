@@ -1,6 +1,6 @@
 {
 	"name": "sveltuse",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"type": "module",
 	"main": "dist/index.js",
@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/rkanik/sveltuse",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run package",
+		"build": "vite build",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"package": "svelte-kit sync && svelte-package && publint",
