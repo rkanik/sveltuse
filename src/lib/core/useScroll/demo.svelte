@@ -5,23 +5,31 @@
 	import { Input } from 'flowbite-svelte'
 
 	let el: HTMLElement
-	const { x, y, isScrolling, arrivedState, directions } = useScroll(() => el)
+	let smooth = false
+
+	const { x, y, isScrolling, arrivedState, directions } = useScroll(() => el, {
+		behavior: () => (smooth ? 'smooth' : 'auto')
+	})
 </script>
 
 <div class="flex">
 	<div
 		bind:this={el}
 		class="w-[300px] h-[300px] m-auto overflow-scroll bg-gray-800 rounded">
-		<div class="w-[500px] h-[400px] relative">
-			<div class="x-2 y-1 bg-gray-700 absolute left-0 top-0">TopLeft</div>
-			<div class="x-2 y-1 bg-gray-700 absolute left-0 bottom-0">
+		<div class="w-[600px] h-[600px] relative">
+			<div class="p-3 x-2 y-1 bg-gray-700 absolute left-0 top-0">
+				TopLeft
+			</div>
+			<div class="p-3 x-2 y-1 bg-gray-700 absolute left-0 bottom-0">
 				BottomLeft
 			</div>
-			<div class="x-2 y-1 bg-gray-700 absolute right-0 top-0">TopRight</div>
-			<div class="x-2 y-1 bg-gray-700 absolute right-0 bottom-0">
+			<div class="p-3 x-2 y-1 bg-gray-700 absolute right-0 top-0">
+				TopRight
+			</div>
+			<div class="p-3 x-2 y-1 bg-gray-700 absolute right-0 bottom-0">
 				BottomRight
 			</div>
-			<div class="x-2 y-1 bg-gray-700 absolute left-1/3 top-1/3">
+			<div class="p-3 x-2 y-1 bg-gray-700 absolute left-1/3 top-1/3">
 				Scroll Me
 			</div>
 		</div>
@@ -34,8 +42,8 @@
 				<Input
 					value={Math.round($x)}
 					min="0"
-					max="200"
-					step="20"
+					max="800"
+					step="100"
 					type="number"
 					on:input={useDebounceFn((e) => {
 						x.set(+e.target.value)
@@ -47,13 +55,20 @@
 				<Input
 					value={Math.round($y)}
 					min="0"
-					max="200"
-					step="20"
+					max="800"
+					step="100"
 					type="number"
 					on:input={useDebounceFn((e) => {
 						y.set(+e.target.value)
 					}, 200)} />
 			</div>
+
+			<span class="text-right opacity-75">Smooth</span>
+			<input
+				class="mt-1"
+				type="checkbox"
+				checked={smooth}
+				on:input={(e) => (smooth = e.target.checked)} />
 
 			<span class="text-right opacity-75">isScrolling</span>
 			<BooleanDisplay value={$isScrolling} />

@@ -1,13 +1,14 @@
 // Ported from https://vueuse.org/useScroll
-
-import { derived, writable } from 'svelte/store'
 import type { MaybeGetter } from 'sveltuse/types'
-import anonymous from 'sveltuse/utils/anonymous'
+
 import toValue from 'sveltuse/utils/toValue'
-import { useEventListener } from '../useEventListener'
+import computed from 'sveltuse/utils/computed'
+import anonymous from 'sveltuse/utils/anonymous'
+
+import { writable } from 'svelte/store'
 import { useThrottleFn } from '../useThrottleFn'
 import { useDebounceFn } from '../useDebounceFn'
-import { onDestroy } from 'svelte'
+import { useEventListener } from '../useEventListener'
 
 type BooleanPositions = {
 	left: boolean
@@ -236,21 +237,33 @@ export function useScroll(
 
 	useEventListener(element, 'scrollend', onScrollEnd, eventListenerOptions)
 
-	let unsubscribeX = internalX.subscribe((x) => {
-		scrollTo(x, undefined)
-	})
-	let unsubscribeY = internalY.subscribe((y) => {
-		scrollTo(undefined, y)
+	const x = computed(internalX, {
+		get: ($x) => $x,
+		set(value, store) {
+			scrollTo(value, undefined)
+			store.set(value)
+		},
+		update(updater, store, value) {
+			scrollTo(value, undefined)
+			store.update(updater)
+		}
 	})
 
-	onDestroy(() => {
-		unsubscribeX()
-		unsubscribeY()
+	const y = computed(internalY, {
+		get: ($y) => $y,
+		set(value, store) {
+			scrollTo(undefined, value)
+			store.set(value)
+		},
+		update(updater, store, value) {
+			scrollTo(undefined, value)
+			store.update(updater)
+		}
 	})
 
 	return {
-		x: internalX,
-		y: internalY,
+		x,
+		y,
 		isScrolling,
 		arrivedState,
 		directions,
