@@ -27,7 +27,7 @@
 		"add-exports": "node ./scripts/add-exports-to-package-json.js",
 		"gen:props": "createprops",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm run add-exports && npm publish"
+		"package:publish": "npm run add-exports && standard-version && git push --follow-tags origin main && npm run package && npm publish"
 	},
 	"dependencies": {
 		"@docsearch/js": "^3.3.4",
