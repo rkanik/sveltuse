@@ -1,10 +1,8 @@
 <script lang="ts">
-	import type { Writable } from 'svelte/store'
-
 	import Icon from '@iconify/svelte'
 
 	import { page } from '$app/stores'
-	import { getContext } from 'svelte'
+	import { useContext } from 'sveltuse'
 	import { afterNavigate } from '$app/navigation'
 	import {
 		Sidebar,
@@ -17,7 +15,7 @@
 
 	export let data
 
-	const drawerHidden: Writable<boolean> = getContext('drawer')
+	const drawerHidden = useContext<boolean>('drawer')
 	const closeDrawer = () => {
 		drawerHidden.set(true)
 	}
@@ -48,6 +46,10 @@
 		// for (const k in dropdowns) dropdowns[k] = false
 		// dropdowns[key] = true
 	})
+
+	$: if ($page.url.pathname.includes('/useContext')) {
+		useContext('time', new Date())
+	}
 </script>
 
 <Sidebar

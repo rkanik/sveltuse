@@ -11,15 +11,13 @@
 		NavHamburger
 	} from 'flowbite-svelte'
 
-	import { setContext } from 'svelte'
-	import { writable, type Writable } from 'svelte/store'
-
 	import Icon from '@iconify/svelte'
 	import DocBadge from './utils/DocBadge.svelte'
 	import ToolbarLink from './utils/ToolbarLink.svelte'
 	import AlgoliaSearch from './utils/AlgoliaSearch.svelte'
 	import DarkMode from 'components/darkmode/DarkMode.svelte'
 	import NavSidebarHamburger from 'components/navbar/NavSidebarHamburger.svelte'
+	import { useContext } from 'sveltuse'
 
 	export let data
 
@@ -33,11 +31,9 @@
 	let ulClass =
 		'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium text-gray-900 dark:text-gray-300 gap-4'
 
-	const drawerHiddenStore: Writable<boolean> = writable<boolean>(true)
-	setContext('drawer', drawerHiddenStore)
-
+	const drawerContext = useContext('drawer', true)
 	const toggleDrawer = () => {
-		drawerHiddenStore.update((state) => !state)
+		drawerContext.update((v) => !v)
 	}
 
 	const items = [

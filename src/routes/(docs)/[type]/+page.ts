@@ -7,7 +7,6 @@ export async function load({ params }) {
 			content: post.default
 		}
 	} catch (err: any) {
-		console.log(err.message)
 		throw error(404, {
 			message: err.message || 'Page not found!'
 		})

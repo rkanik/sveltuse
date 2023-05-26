@@ -20,6 +20,11 @@ export const handle = async (input) => {
 	if (redirectPathname) {
 		return Response.redirect(redirectPathname, 301)
 	}
+
+	if (import.meta.env.DEV) {
+		return await input.resolve(input.event)
+	}
+
 	return sitemapHook(sitemap, {
 		async getRobots() {
 			return {
