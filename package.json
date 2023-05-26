@@ -12,7 +12,7 @@
 		"url": "https://rkanik.pages.dev/"
 	},
 	"bugs": "https://github.com/rkanik/sveltuse/issues",
-	"homepage": "https://github.com/rkanik/sveltuse",
+	"homepage": "https://sveltuse.pages.dev/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
