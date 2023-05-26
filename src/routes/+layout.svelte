@@ -80,7 +80,9 @@
 		</NavBrand>
 
 		{#if !isHomePage}
-			<AlgoliaSearch />
+			<div class="w-64">
+				<AlgoliaSearch />
+			</div>
 		{/if}
 
 		<NavUl
@@ -102,7 +104,7 @@
 
 		<div class="flex items-center ml-auto">
 			<ToolbarLink
-				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
+				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900 w-11"
 				name="View on GitHub"
 				href="https://github.com/rkanik/sveltuse">
 				<Icon class="text-2xl" icon="mdi-github" />

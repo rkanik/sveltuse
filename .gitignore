@@ -9,6 +9,7 @@ node_modules
 !.env.example
 
 .vercel
+.unlighthouse
 
 /src/routes/compotests
 /src/routes/typechecktests
