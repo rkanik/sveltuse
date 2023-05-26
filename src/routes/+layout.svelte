@@ -112,12 +112,12 @@
 				<Icon class="text-2xl" icon="mdi-github" />
 			</ToolbarLink>
 
-			<ToolbarLink
+			<!-- <ToolbarLink
 				class="hidden sm:inline-block dark:hover:text-white hover:text-gray-900"
 				name="View on Npm"
 				href="https://www.npmjs.com/package/sveltuse">
 				<Icon class="text-2xl" icon="eva:npm-outline" />
-			</ToolbarLink>
+			</ToolbarLink> -->
 			<!-- <ToolbarLink
 				class="hidden xl:inline-block dark:hover:text-white hover:text-gray-900"
 				name="Join community on Discord"
