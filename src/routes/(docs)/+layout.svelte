@@ -109,8 +109,8 @@
 
 {#if import.meta.env.DEV}
 	<Button
-		href={$page.url.pathname.endsWith('/demo')
-			? $page.url.pathname.replace('/demo', '')
+		href={$page.url.pathname.includes('/demo')
+			? $page.url.pathname.split('/demo').shift()
 			: $page.url.pathname + '/demo'}
 		pill
 		class="fixed bottom-4 right-8 !p-3"
