@@ -9,7 +9,10 @@ hrefText:
 # Heading
 title: useResizeObserver
 description: Reports changes to the dimensions of an Element's content or the border-box.
+related: useMutationObserver
 ---
+
+Ported from [vueuse/useResizeObserver](https://vueuse.org/core/useResizeObserver)
 
 ## Usage
 

@@ -11,6 +11,7 @@ title: useMouse
 description: Reactive mouse position.
 ---
 
+Ported from [vueuse/useMouse](https://vueuse.org/core/useMouse)
 
 ```svelte example
 <script lang="ts">
