@@ -11,5 +11,6 @@
 		"Sveluse"
 	],
 	"editor.detectIndentation": false,
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"vite.autoStart": false
 }

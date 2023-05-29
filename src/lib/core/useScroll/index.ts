@@ -7,8 +7,8 @@ import anonymous from 'sveltuse/utils/anonymous'
 
 import { writable } from 'svelte/store'
 import { useThrottleFn } from '../useThrottleFn'
-import { useDebounceFn } from '../useDebounceFn'
 import { useEventListener } from '../useEventListener'
+import { useScrollEnd } from '../useScrollEnd'
 
 type BooleanPositions = {
 	left: boolean
@@ -147,7 +147,6 @@ export function useScroll(
 
 		onStop(e)
 	}
-	const onScrollEndDebounced = useDebounceFn(onScrollEnd, throttle + idle)
 
 	const setArrivedState = (
 		target: HTMLElement | SVGElement | Window | Document | null | undefined
@@ -181,8 +180,6 @@ export function useScroll(
 			arrivedState.update((v) => ({ ...v, left, right }))
 		}
 
-		internalX.set(scrollLeft)
-
 		let scrollTop = el.scrollTop
 
 		// patch for mobile compatible
@@ -210,9 +207,12 @@ export function useScroll(
 		}
 
 		internalY.set(scrollTop)
+		internalX.set(scrollLeft)
 	}
 
 	const onScrollHandler = (e: Event) => {
+		isScrolling.set(true)
+
 		const eventTarget = (
 			e.target === document
 				? (e.target as Document).documentElement
@@ -220,9 +220,6 @@ export function useScroll(
 		) as HTMLElement
 
 		setArrivedState(eventTarget)
-
-		isScrolling.set(true)
-		onScrollEndDebounced(e)
 		onScroll(e)
 	}
 
@@ -235,7 +232,7 @@ export function useScroll(
 		eventListenerOptions
 	)
 
-	useEventListener(element, 'scrollend', onScrollEnd, eventListenerOptions)
+	useScrollEnd(element, onScrollEnd, { delay: throttle + idle })
 
 	const x = computed(internalX, {
 		get: ($x) => $x,
