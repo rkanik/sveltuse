@@ -8,6 +8,8 @@ export type Arrayable<T> = T[] | T
  */
 export type AnyFn = (...args: any[]) => any
 
+export type Awaitable<T> = Promise<T> | T
+
 export type Store<T> = Writable<T> | Readable<T>
 
 export type MaybeGetter<T, A = undefined> = T | Store<T> | ((...args: A[]) => T)

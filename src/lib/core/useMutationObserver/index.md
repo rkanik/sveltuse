@@ -17,7 +17,6 @@ Watch for changes being made to the DOM tree. [MutationObserver MDN](https://dev
 
 Ported from [vueuse/useMutationObserver](https://vueuse.org/core/useMutationObserver)
 
-
 ## Example
 
 ```svelte example

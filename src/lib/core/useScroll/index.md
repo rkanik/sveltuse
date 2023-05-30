@@ -9,8 +9,10 @@ hrefText:
 # Heading
 title: useScroll
 description: Reactive scroll position and state.
-related:
+related: useInfiniteScroll, useWindowScroll
 ---
+
+Ported from [vueuse/useScroll](https://vueuse.org/core/useScroll)
 
 ## Example
 
