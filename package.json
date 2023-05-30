@@ -1,217 +1,241 @@
 {
-	"name": "sveltuse",
-	"version": "0.0.7",
-	"description": "Collection of Essential Svelte Composition Utilities",
-	"type": "module",
-	"main": "dist/index.js",
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"author": {
-		"name": "RK Anik",
-		"email": "rkanik.me@gmail.com",
-		"url": "https://rkanik.pages.dev/"
-	},
-	"bugs": "https://github.com/rkanik/sveltuse/issues",
-	"homepage": "https://sveltuse.pages.dev/",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"test": "playwright test",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write .",
-		"write-package-json": "node ./scripts/package-json-writer.js",
-		"add-exports": "node ./scripts/add-exports-to-package-json.js",
-		"gen:props": "createprops",
-		"package": "svelte-kit sync && svelte-package && publint",
-		"package:publish": "npm run add-exports && standard-version && git push --follow-tags origin main && npm run package && npm publish",
-		"lighthouse": "npx unlighthouse"
-	},
-	"dependencies": {
-		"@docsearch/js": "^3.3.4",
-		"@popperjs/core": "^2.11.7",
-		"classnames": "^2.3.2",
-		"flowbite": "^1.6.5",
-		"flowbite-svelte": "^0.36.2"
-	},
-	"peerDependencies": {
-		"svelte": "^3.54.0"
-	},
-	"devDependencies": {
-		"@iconify/svelte": "^3.1.3",
-		"@playwright/test": "^1.33.0",
-		"@sveltejs/adapter-cloudflare": "^2.2.4",
-		"@sveltejs/kit": "^1.16.2",
-		"@sveltejs/package": "^2.0.0",
-		"@typescript-eslint/eslint-plugin": "^5.59.2",
-		"@typescript-eslint/parser": "^5.59.2",
-		"autoprefixer": "^10.4.14",
-		"createprops": "^0.6.1",
-		"esbuild": "0.17.18",
-		"eslint": "^8.40.0",
-		"eslint-config-prettier": "^8.8.0",
-		"eslint-plugin-svelte3": "^4.0.0",
-		"mdsvex": "^0.10.6",
-		"mdsvexamples": "^0.3.3",
-		"postcss": "^8.4.23",
-		"postcss-load-config": "^4.0.1",
-		"prettier": "^2.8.8",
-		"prettier-plugin-svelte": "^2.10.0",
-		"prism-themes": "^1.9.0",
-		"publint": "^0.1.9",
-		"sass": "^1.62.1",
-		"standard-version": "^9.5.0",
-		"svelte": "^3.59.0",
-		"svelte-check": "^3.3.1",
-		"svelte-meta-tags": "^2.7.0",
-		"svelte-preprocess": "^5.0.3",
-		"svelte2tsx": "^0.6.13",
-		"sveltekit-sitemap": "^1.0.21",
-		"tailwindcss": "^3.3.2",
-		"tslib": "^2.5.0",
-		"typescript": "^5.0.4",
-		"unlighthouse": "^0.8.6",
-		"vite": "^4.3.5",
-		"vitest": "^0.31.0"
-	},
-	"keywords": [
-		"svelte",
-		"sveltekit",
-		"svelteuse",
-		"sveltuse",
-		"svelte-use",
-		"utilities",
-		"reusable",
-		"composable",
-		"composition",
-		"functions"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/rkanik/sveltuse"
-	},
-	"engines": {
-		"npm": ">=7.0.0",
-		"node": ">=16.0.0"
-	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*",
-		"!dist/**/*.svelte",
-		"!dist/**/*.svelte.*"
-	],
-	"contributors": [
-		"RK Anik <rkanik.me@gmail.com>"
-	],
-	"license": "MIT",
-	"exports": {
-		"./useBreakpoints": {
-			"types": "./dist/core/useBreakpoints/index.d.ts",
-			"svelte": "./dist/core/useBreakpoints/index.js"
-		},
-		"./useClipboard": {
-			"types": "./dist/core/useClipboard/index.d.ts",
-			"svelte": "./dist/core/useClipboard/index.js"
-		},
-		"./useCounter": {
-			"types": "./dist/core/useCounter/index.d.ts",
-			"svelte": "./dist/core/useCounter/index.js"
-		},
-		"./useDebounceFn": {
-			"types": "./dist/core/useDebounceFn/index.d.ts",
-			"svelte": "./dist/core/useDebounceFn/index.js"
-		},
-		"./useDropZone": {
-			"types": "./dist/core/useDropZone/index.d.ts",
-			"svelte": "./dist/core/useDropZone/index.js"
-		},
-		"./useElementHover": {
-			"types": "./dist/core/useElementHover/index.d.ts",
-			"svelte": "./dist/core/useElementHover/index.js"
-		},
-		"./useEventListener": {
-			"types": "./dist/core/useEventListener/index.d.ts",
-			"svelte": "./dist/core/useEventListener/index.js"
-		},
-		"./useEyeDropper": {
-			"types": "./dist/core/useEyeDropper/index.d.ts",
-			"svelte": "./dist/core/useEyeDropper/index.js"
-		},
-		"./useIntersectionObserver": {
-			"types": "./dist/core/useIntersectionObserver/index.d.ts",
-			"svelte": "./dist/core/useIntersectionObserver/index.js"
-		},
-		"./useIntersectionObserver2": {
-			"types": "./dist/core/useIntersectionObserver2/index.d.ts",
-			"svelte": "./dist/core/useIntersectionObserver2/index.js"
-		},
-		"./useIsSupported": {
-			"types": "./dist/core/useIsSupported/index.d.ts",
-			"svelte": "./dist/core/useIsSupported/index.js"
-		},
-		"./useMediaQuery": {
-			"types": "./dist/core/useMediaQuery/index.d.ts",
-			"svelte": "./dist/core/useMediaQuery/index.js"
-		},
-		"./useMounted": {
-			"types": "./dist/core/useMounted/index.d.ts",
-			"svelte": "./dist/core/useMounted/index.js"
-		},
-		"./useMouse": {
-			"types": "./dist/core/useMouse/index.d.ts",
-			"svelte": "./dist/core/useMouse/index.js"
-		},
-		"./useObjectUrl": {
-			"types": "./dist/core/useObjectUrl/index.d.ts",
-			"svelte": "./dist/core/useObjectUrl/index.js"
-		},
-		"./usePermission": {
-			"types": "./dist/core/usePermission/index.d.ts",
-			"svelte": "./dist/core/usePermission/index.js"
-		},
-		"./usePreferredDark": {
-			"types": "./dist/core/usePreferredDark/index.d.ts",
-			"svelte": "./dist/core/usePreferredDark/index.js"
-		},
-		"./useResizeObserver": {
-			"types": "./dist/core/useResizeObserver/index.d.ts",
-			"svelte": "./dist/core/useResizeObserver/index.js"
-		},
-		"./useScriptTag": {
-			"types": "./dist/core/useScriptTag/index.d.ts",
-			"svelte": "./dist/core/useScriptTag/index.js"
-		},
-		"./useStates": {
-			"types": "./dist/core/useStates/index.d.ts",
-			"svelte": "./dist/core/useStates/index.js"
-		},
-		"./useSupported": {
-			"types": "./dist/core/useSupported/index.d.ts",
-			"svelte": "./dist/core/useSupported/index.js"
-		},
-		"./useThrottleFn": {
-			"types": "./dist/core/useThrottleFn/index.d.ts",
-			"svelte": "./dist/core/useThrottleFn/index.js"
-		},
-		"./useTimeoutFn": {
-			"types": "./dist/core/useTimeoutFn/index.d.ts",
-			"svelte": "./dist/core/useTimeoutFn/index.js"
-		},
-		"./useToggle": {
-			"types": "./dist/core/useToggle/index.d.ts",
-			"svelte": "./dist/core/useToggle/index.js"
-		},
-		"./usePDF": {
-			"types": "./dist/integrations/usePDF/index.d.ts",
-			"svelte": "./dist/integrations/usePDF/index.js"
-		},
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		}
-	}
+   "name": "sveltuse",
+   "version": "0.0.8",
+   "description": "Collection of Essential Svelte Composition Utilities",
+   "type": "module",
+   "main": "dist/index.js",
+   "svelte": "./dist/index.js",
+   "types": "./dist/index.d.ts",
+   "author": {
+      "name": "RK Anik",
+      "email": "rkanik.me@gmail.com",
+      "url": "https://rkanik.pages.dev/"
+   },
+   "bugs": "https://github.com/rkanik/sveltuse/issues",
+   "homepage": "https://sveltuse.pages.dev/",
+   "scripts": {
+      "dev": "vite dev",
+      "build": "vite build",
+      "preview": "vite preview",
+      "test": "playwright test",
+      "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+      "test:unit": "vitest",
+      "lint": "prettier --plugin-search-dir . --check . && eslint .",
+      "format": "prettier --plugin-search-dir . --write .",
+      "write-package-json": "node ./scripts/package-json-writer.js",
+      "add-exports": "node ./scripts/add-exports-to-package-json.js",
+      "gen:props": "createprops",
+      "package": "svelte-kit sync && svelte-package && publint",
+      "package:publish": "npm run add-exports && standard-version && git push --follow-tags origin main && npm run package && npm publish",
+      "lighthouse": "npx unlighthouse"
+   },
+   "dependencies": {
+      "@docsearch/js": "^3.3.4",
+      "@popperjs/core": "^2.11.7",
+      "classnames": "^2.3.2",
+      "flowbite": "^1.6.5",
+      "flowbite-svelte": "^0.36.2"
+   },
+   "peerDependencies": {
+      "svelte": "^3.54.0"
+   },
+   "devDependencies": {
+      "@iconify/svelte": "^3.1.3",
+      "@playwright/test": "^1.33.0",
+      "@sveltejs/adapter-cloudflare": "^2.2.4",
+      "@sveltejs/kit": "^1.16.2",
+      "@sveltejs/package": "^2.0.0",
+      "@typescript-eslint/eslint-plugin": "^5.59.2",
+      "@typescript-eslint/parser": "^5.59.2",
+      "autoprefixer": "^10.4.14",
+      "createprops": "^0.6.1",
+      "esbuild": "0.17.18",
+      "eslint": "^8.40.0",
+      "eslint-config-prettier": "^8.8.0",
+      "eslint-plugin-svelte3": "^4.0.0",
+      "mdsvex": "^0.10.6",
+      "mdsvexamples": "^0.3.3",
+      "postcss": "^8.4.23",
+      "postcss-load-config": "^4.0.1",
+      "prettier": "^2.8.8",
+      "prettier-plugin-svelte": "^2.10.0",
+      "prism-themes": "^1.9.0",
+      "publint": "^0.1.9",
+      "sass": "^1.62.1",
+      "standard-version": "^9.5.0",
+      "svelte": "^3.59.0",
+      "svelte-check": "^3.3.1",
+      "svelte-meta-tags": "^2.7.0",
+      "svelte-preprocess": "^5.0.3",
+      "svelte2tsx": "^0.6.13",
+      "sveltekit-sitemap": "^1.0.21",
+      "tailwindcss": "^3.3.2",
+      "tslib": "^2.5.0",
+      "typescript": "^5.0.4",
+      "unlighthouse": "^0.8.6",
+      "vite": "^4.3.5",
+      "vitest": "^0.31.0"
+   },
+   "keywords": [
+      "svelte",
+      "sveltekit",
+      "svelteuse",
+      "sveltuse",
+      "svelte-use",
+      "utilities",
+      "reusable",
+      "composable",
+      "composition",
+      "functions"
+   ],
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/rkanik/sveltuse"
+   },
+   "engines": {
+      "npm": ">=7.0.0",
+      "node": ">=16.0.0"
+   },
+   "files": [
+      "dist",
+      "!dist/**/*.test.*",
+      "!dist/**/*.spec.*",
+      "!dist/**/*.svelte",
+      "!dist/**/*.svelte.*"
+   ],
+   "contributors": [
+      "RK Anik <rkanik.me@gmail.com>"
+   ],
+   "license": "MIT",
+   "exports": {
+      "./useBreakpoints": {
+         "types": "./dist/core/useBreakpoints/index.d.ts",
+         "svelte": "./dist/core/useBreakpoints/index.js"
+      },
+      "./useClipboard": {
+         "types": "./dist/core/useClipboard/index.d.ts",
+         "svelte": "./dist/core/useClipboard/index.js"
+      },
+      "./useContext": {
+         "types": "./dist/core/useContext/index.d.ts",
+         "svelte": "./dist/core/useContext/index.js"
+      },
+      "./useCounter": {
+         "types": "./dist/core/useCounter/index.d.ts",
+         "svelte": "./dist/core/useCounter/index.js"
+      },
+      "./useDebounceFn": {
+         "types": "./dist/core/useDebounceFn/index.d.ts",
+         "svelte": "./dist/core/useDebounceFn/index.js"
+      },
+      "./useDropZone": {
+         "types": "./dist/core/useDropZone/index.d.ts",
+         "svelte": "./dist/core/useDropZone/index.js"
+      },
+      "./useElementHover": {
+         "types": "./dist/core/useElementHover/index.d.ts",
+         "svelte": "./dist/core/useElementHover/index.js"
+      },
+      "./useEventListener": {
+         "types": "./dist/core/useEventListener/index.d.ts",
+         "svelte": "./dist/core/useEventListener/index.js"
+      },
+      "./useEyeDropper": {
+         "types": "./dist/core/useEyeDropper/index.d.ts",
+         "svelte": "./dist/core/useEyeDropper/index.js"
+      },
+      "./useInfiniteScroll": {
+         "types": "./dist/core/useInfiniteScroll/index.d.ts",
+         "svelte": "./dist/core/useInfiniteScroll/index.js"
+      },
+      "./useIntersectionObserver": {
+         "types": "./dist/core/useIntersectionObserver/index.d.ts",
+         "svelte": "./dist/core/useIntersectionObserver/index.js"
+      },
+      "./useIntersectionObserver2": {
+         "types": "./dist/core/useIntersectionObserver2/index.d.ts",
+         "svelte": "./dist/core/useIntersectionObserver2/index.js"
+      },
+      "./useIsSupported": {
+         "types": "./dist/core/useIsSupported/index.d.ts",
+         "svelte": "./dist/core/useIsSupported/index.js"
+      },
+      "./useMediaQuery": {
+         "types": "./dist/core/useMediaQuery/index.d.ts",
+         "svelte": "./dist/core/useMediaQuery/index.js"
+      },
+      "./useMounted": {
+         "types": "./dist/core/useMounted/index.d.ts",
+         "svelte": "./dist/core/useMounted/index.js"
+      },
+      "./useMouse": {
+         "types": "./dist/core/useMouse/index.d.ts",
+         "svelte": "./dist/core/useMouse/index.js"
+      },
+      "./useMutationObserver": {
+         "types": "./dist/core/useMutationObserver/index.d.ts",
+         "svelte": "./dist/core/useMutationObserver/index.js"
+      },
+      "./useObjectUrl": {
+         "types": "./dist/core/useObjectUrl/index.d.ts",
+         "svelte": "./dist/core/useObjectUrl/index.js"
+      },
+      "./usePermission": {
+         "types": "./dist/core/usePermission/index.d.ts",
+         "svelte": "./dist/core/usePermission/index.js"
+      },
+      "./usePreferredDark": {
+         "types": "./dist/core/usePreferredDark/index.d.ts",
+         "svelte": "./dist/core/usePreferredDark/index.js"
+      },
+      "./useResizeObserver": {
+         "types": "./dist/core/useResizeObserver/index.d.ts",
+         "svelte": "./dist/core/useResizeObserver/index.js"
+      },
+      "./useScriptTag": {
+         "types": "./dist/core/useScriptTag/index.d.ts",
+         "svelte": "./dist/core/useScriptTag/index.js"
+      },
+      "./useScroll": {
+         "types": "./dist/core/useScroll/index.d.ts",
+         "svelte": "./dist/core/useScroll/index.js"
+      },
+      "./useScrollEnd": {
+         "types": "./dist/core/useScrollEnd/index.d.ts",
+         "svelte": "./dist/core/useScrollEnd/index.js"
+      },
+      "./useStates": {
+         "types": "./dist/core/useStates/index.d.ts",
+         "svelte": "./dist/core/useStates/index.js"
+      },
+      "./useSupported": {
+         "types": "./dist/core/useSupported/index.d.ts",
+         "svelte": "./dist/core/useSupported/index.js"
+      },
+      "./useThrottleFn": {
+         "types": "./dist/core/useThrottleFn/index.d.ts",
+         "svelte": "./dist/core/useThrottleFn/index.js"
+      },
+      "./useTimeoutFn": {
+         "types": "./dist/core/useTimeoutFn/index.d.ts",
+         "svelte": "./dist/core/useTimeoutFn/index.js"
+      },
+      "./useToggle": {
+         "types": "./dist/core/useToggle/index.d.ts",
+         "svelte": "./dist/core/useToggle/index.js"
+      },
+      "./useWindowScroll": {
+         "types": "./dist/core/useWindowScroll/index.d.ts",
+         "svelte": "./dist/core/useWindowScroll/index.js"
+      },
+      "./usePDF": {
+         "types": "./dist/integrations/usePDF/index.d.ts",
+         "svelte": "./dist/integrations/usePDF/index.js"
+      },
+      ".": {
+         "types": "./dist/index.d.ts",
+         "svelte": "./dist/index.js"
+      }
+   }
 }
