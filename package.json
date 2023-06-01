@@ -1,6 +1,6 @@
 {
 	"name": "sveltuse",
-	"version": "0.0.10",
+	"version": "0.0.11",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"type": "module",
 	"main": "dist/index.js",
@@ -27,7 +27,7 @@
 		"add-exports": "node ./scripts/add-exports-to-package-json.js",
 		"gen:props": "createprops",
 		"package": "svelte-kit sync && svelte-package && publint",
-		"package:publish": "npm run add-exports && standard-version && git push --follow-tags origin main && npm run package && npm publish",
+		"package:publish": "standard-version && git push --follow-tags origin main && npm run package && npm publish",
 		"lighthouse": "npx unlighthouse"
 	},
 	"dependencies": {
