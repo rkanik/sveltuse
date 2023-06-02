@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@docsearch/js':
@@ -45,6 +49,9 @@ devDependencies:
   createprops:
     specifier: ^0.6.1
     version: 0.6.1
+  darkreader:
+    specifier: ^4.9.58
+    version: 4.9.58
   esbuild:
     specifier: 0.17.18
     version: 0.17.18
@@ -2491,6 +2498,10 @@ packages:
   /dargs@7.0.0:
     resolution: {integrity: sha512-2iy1EkLdlBzQGvbweYRFxmFath8+K7+AKB0TlhHWkNuH+TmovaMH/Wp7V7R4u7f4SnX3OgLsU9t1NI9ioDnUpg==}
     engines: {node: '>=8'}
+    dev: true
+
+  /darkreader@4.9.58:
+    resolution: {integrity: sha512-D/JGoJqW3m2AWBLhO+Pev+eThfs+CwRT4bcLb/1zKjql2yVwG0lx8C2XRDdSVGHw4y11n26W7syWoBpUfuhMqQ==}
     dev: true
 
   /data-uri-to-buffer@5.0.1:
