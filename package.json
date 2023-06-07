@@ -27,7 +27,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"write-package-json": "node ./scripts/package-json-writer.js",
-		"add-exports": "node ./scripts/add-exports-to-package-json.js && pn format",
+		"add-exports": "node ./scripts/add-exports-to-package-json.js",
 		"gen:props": "createprops",
 		"lighthouse": "npx unlighthouse"
 	},
@@ -115,143 +115,312 @@
 	"exports": {
 		"./useArray": {
 			"types": "./dist/core/useArray/index.d.ts",
-			"svelte": "./dist/core/useArray/index.js"
+			"default": "./dist/core/useArray/index.js"
+		},
+		"./dist/core/useArray": {
+			"types": "./dist/core/useArray/index.d.ts",
+			"default": "./dist/core/useArray/index.js"
 		},
 		"./useBreakpoints": {
 			"types": "./dist/core/useBreakpoints/index.d.ts",
-			"svelte": "./dist/core/useBreakpoints/index.js"
+			"default": "./dist/core/useBreakpoints/index.js"
+		},
+		"./dist/core/useBreakpoints": {
+			"types": "./dist/core/useBreakpoints/index.d.ts",
+			"default": "./dist/core/useBreakpoints/index.js"
 		},
 		"./useClipboard": {
 			"types": "./dist/core/useClipboard/index.d.ts",
-			"svelte": "./dist/core/useClipboard/index.js"
+			"default": "./dist/core/useClipboard/index.js"
+		},
+		"./dist/core/useClipboard": {
+			"types": "./dist/core/useClipboard/index.d.ts",
+			"default": "./dist/core/useClipboard/index.js"
 		},
 		"./useContext": {
 			"types": "./dist/core/useContext/index.d.ts",
-			"svelte": "./dist/core/useContext/index.js"
+			"default": "./dist/core/useContext/index.js"
+		},
+		"./dist/core/useContext": {
+			"types": "./dist/core/useContext/index.d.ts",
+			"default": "./dist/core/useContext/index.js"
 		},
 		"./useCounter": {
 			"types": "./dist/core/useCounter/index.d.ts",
-			"svelte": "./dist/core/useCounter/index.js"
+			"default": "./dist/core/useCounter/index.js"
+		},
+		"./dist/core/useCounter": {
+			"types": "./dist/core/useCounter/index.d.ts",
+			"default": "./dist/core/useCounter/index.js"
 		},
 		"./useDebounceFn": {
 			"types": "./dist/core/useDebounceFn/index.d.ts",
-			"svelte": "./dist/core/useDebounceFn/index.js"
+			"default": "./dist/core/useDebounceFn/index.js"
+		},
+		"./dist/core/useDebounceFn": {
+			"types": "./dist/core/useDebounceFn/index.d.ts",
+			"default": "./dist/core/useDebounceFn/index.js"
 		},
 		"./useDropZone": {
 			"types": "./dist/core/useDropZone/index.d.ts",
-			"svelte": "./dist/core/useDropZone/index.js"
+			"default": "./dist/core/useDropZone/index.js"
+		},
+		"./dist/core/useDropZone": {
+			"types": "./dist/core/useDropZone/index.d.ts",
+			"default": "./dist/core/useDropZone/index.js"
 		},
 		"./useElementHover": {
 			"types": "./dist/core/useElementHover/index.d.ts",
-			"svelte": "./dist/core/useElementHover/index.js"
+			"default": "./dist/core/useElementHover/index.js"
+		},
+		"./dist/core/useElementHover": {
+			"types": "./dist/core/useElementHover/index.d.ts",
+			"default": "./dist/core/useElementHover/index.js"
 		},
 		"./useEventListener": {
 			"types": "./dist/core/useEventListener/index.d.ts",
-			"svelte": "./dist/core/useEventListener/index.js"
+			"default": "./dist/core/useEventListener/index.js"
+		},
+		"./dist/core/useEventListener": {
+			"types": "./dist/core/useEventListener/index.d.ts",
+			"default": "./dist/core/useEventListener/index.js"
 		},
 		"./useEyeDropper": {
 			"types": "./dist/core/useEyeDropper/index.d.ts",
-			"svelte": "./dist/core/useEyeDropper/index.js"
+			"default": "./dist/core/useEyeDropper/index.js"
+		},
+		"./dist/core/useEyeDropper": {
+			"types": "./dist/core/useEyeDropper/index.d.ts",
+			"default": "./dist/core/useEyeDropper/index.js"
 		},
 		"./useInfiniteScroll": {
 			"types": "./dist/core/useInfiniteScroll/index.d.ts",
-			"svelte": "./dist/core/useInfiniteScroll/index.js"
+			"default": "./dist/core/useInfiniteScroll/index.js"
+		},
+		"./dist/core/useInfiniteScroll": {
+			"types": "./dist/core/useInfiniteScroll/index.d.ts",
+			"default": "./dist/core/useInfiniteScroll/index.js"
 		},
 		"./useIntersectionObserver": {
 			"types": "./dist/core/useIntersectionObserver/index.d.ts",
-			"svelte": "./dist/core/useIntersectionObserver/index.js"
+			"default": "./dist/core/useIntersectionObserver/index.js"
+		},
+		"./dist/core/useIntersectionObserver": {
+			"types": "./dist/core/useIntersectionObserver/index.d.ts",
+			"default": "./dist/core/useIntersectionObserver/index.js"
 		},
 		"./useIntersectionObserver2": {
 			"types": "./dist/core/useIntersectionObserver2/index.d.ts",
-			"svelte": "./dist/core/useIntersectionObserver2/index.js"
+			"default": "./dist/core/useIntersectionObserver2/index.js"
+		},
+		"./dist/core/useIntersectionObserver2": {
+			"types": "./dist/core/useIntersectionObserver2/index.d.ts",
+			"default": "./dist/core/useIntersectionObserver2/index.js"
 		},
 		"./useIsSupported": {
 			"types": "./dist/core/useIsSupported/index.d.ts",
-			"svelte": "./dist/core/useIsSupported/index.js"
+			"default": "./dist/core/useIsSupported/index.js"
+		},
+		"./dist/core/useIsSupported": {
+			"types": "./dist/core/useIsSupported/index.d.ts",
+			"default": "./dist/core/useIsSupported/index.js"
 		},
 		"./useMediaQuery": {
 			"types": "./dist/core/useMediaQuery/index.d.ts",
-			"svelte": "./dist/core/useMediaQuery/index.js"
+			"default": "./dist/core/useMediaQuery/index.js"
+		},
+		"./dist/core/useMediaQuery": {
+			"types": "./dist/core/useMediaQuery/index.d.ts",
+			"default": "./dist/core/useMediaQuery/index.js"
 		},
 		"./useMounted": {
 			"types": "./dist/core/useMounted/index.d.ts",
-			"svelte": "./dist/core/useMounted/index.js"
+			"default": "./dist/core/useMounted/index.js"
+		},
+		"./dist/core/useMounted": {
+			"types": "./dist/core/useMounted/index.d.ts",
+			"default": "./dist/core/useMounted/index.js"
 		},
 		"./useMouse": {
 			"types": "./dist/core/useMouse/index.d.ts",
-			"svelte": "./dist/core/useMouse/index.js"
+			"default": "./dist/core/useMouse/index.js"
+		},
+		"./dist/core/useMouse": {
+			"types": "./dist/core/useMouse/index.d.ts",
+			"default": "./dist/core/useMouse/index.js"
 		},
 		"./useMutationObserver": {
 			"types": "./dist/core/useMutationObserver/index.d.ts",
-			"svelte": "./dist/core/useMutationObserver/index.js"
+			"default": "./dist/core/useMutationObserver/index.js"
+		},
+		"./dist/core/useMutationObserver": {
+			"types": "./dist/core/useMutationObserver/index.d.ts",
+			"default": "./dist/core/useMutationObserver/index.js"
 		},
 		"./useObjectUrl": {
 			"types": "./dist/core/useObjectUrl/index.d.ts",
-			"svelte": "./dist/core/useObjectUrl/index.js"
+			"default": "./dist/core/useObjectUrl/index.js"
+		},
+		"./dist/core/useObjectUrl": {
+			"types": "./dist/core/useObjectUrl/index.d.ts",
+			"default": "./dist/core/useObjectUrl/index.js"
 		},
 		"./usePermission": {
 			"types": "./dist/core/usePermission/index.d.ts",
-			"svelte": "./dist/core/usePermission/index.js"
+			"default": "./dist/core/usePermission/index.js"
+		},
+		"./dist/core/usePermission": {
+			"types": "./dist/core/usePermission/index.d.ts",
+			"default": "./dist/core/usePermission/index.js"
 		},
 		"./usePreferredDark": {
 			"types": "./dist/core/usePreferredDark/index.d.ts",
-			"svelte": "./dist/core/usePreferredDark/index.js"
+			"default": "./dist/core/usePreferredDark/index.js"
+		},
+		"./dist/core/usePreferredDark": {
+			"types": "./dist/core/usePreferredDark/index.d.ts",
+			"default": "./dist/core/usePreferredDark/index.js"
 		},
 		"./useResizeObserver": {
 			"types": "./dist/core/useResizeObserver/index.d.ts",
-			"svelte": "./dist/core/useResizeObserver/index.js"
+			"default": "./dist/core/useResizeObserver/index.js"
+		},
+		"./dist/core/useResizeObserver": {
+			"types": "./dist/core/useResizeObserver/index.d.ts",
+			"default": "./dist/core/useResizeObserver/index.js"
 		},
 		"./useScriptTag": {
 			"types": "./dist/core/useScriptTag/index.d.ts",
-			"svelte": "./dist/core/useScriptTag/index.js"
+			"default": "./dist/core/useScriptTag/index.js"
+		},
+		"./dist/core/useScriptTag": {
+			"types": "./dist/core/useScriptTag/index.d.ts",
+			"default": "./dist/core/useScriptTag/index.js"
 		},
 		"./useScroll": {
 			"types": "./dist/core/useScroll/index.d.ts",
-			"svelte": "./dist/core/useScroll/index.js"
+			"default": "./dist/core/useScroll/index.js"
+		},
+		"./dist/core/useScroll": {
+			"types": "./dist/core/useScroll/index.d.ts",
+			"default": "./dist/core/useScroll/index.js"
 		},
 		"./useScrollEnd": {
 			"types": "./dist/core/useScrollEnd/index.d.ts",
-			"svelte": "./dist/core/useScrollEnd/index.js"
+			"default": "./dist/core/useScrollEnd/index.js"
+		},
+		"./dist/core/useScrollEnd": {
+			"types": "./dist/core/useScrollEnd/index.d.ts",
+			"default": "./dist/core/useScrollEnd/index.js"
 		},
 		"./useStates": {
 			"types": "./dist/core/useStates/index.d.ts",
-			"svelte": "./dist/core/useStates/index.js"
+			"default": "./dist/core/useStates/index.js"
+		},
+		"./dist/core/useStates": {
+			"types": "./dist/core/useStates/index.d.ts",
+			"default": "./dist/core/useStates/index.js"
 		},
 		"./useSupported": {
 			"types": "./dist/core/useSupported/index.d.ts",
-			"svelte": "./dist/core/useSupported/index.js"
+			"default": "./dist/core/useSupported/index.js"
+		},
+		"./dist/core/useSupported": {
+			"types": "./dist/core/useSupported/index.d.ts",
+			"default": "./dist/core/useSupported/index.js"
 		},
 		"./useThrottleFn": {
 			"types": "./dist/core/useThrottleFn/index.d.ts",
-			"svelte": "./dist/core/useThrottleFn/index.js"
+			"default": "./dist/core/useThrottleFn/index.js"
+		},
+		"./dist/core/useThrottleFn": {
+			"types": "./dist/core/useThrottleFn/index.d.ts",
+			"default": "./dist/core/useThrottleFn/index.js"
 		},
 		"./useTimeoutFn": {
 			"types": "./dist/core/useTimeoutFn/index.d.ts",
-			"svelte": "./dist/core/useTimeoutFn/index.js"
+			"default": "./dist/core/useTimeoutFn/index.js"
+		},
+		"./dist/core/useTimeoutFn": {
+			"types": "./dist/core/useTimeoutFn/index.d.ts",
+			"default": "./dist/core/useTimeoutFn/index.js"
 		},
 		"./useToggle": {
 			"types": "./dist/core/useToggle/index.d.ts",
-			"svelte": "./dist/core/useToggle/index.js"
+			"default": "./dist/core/useToggle/index.js"
+		},
+		"./dist/core/useToggle": {
+			"types": "./dist/core/useToggle/index.d.ts",
+			"default": "./dist/core/useToggle/index.js"
 		},
 		"./useWindowScroll": {
 			"types": "./dist/core/useWindowScroll/index.d.ts",
-			"svelte": "./dist/core/useWindowScroll/index.js"
+			"default": "./dist/core/useWindowScroll/index.js"
+		},
+		"./dist/core/useWindowScroll": {
+			"types": "./dist/core/useWindowScroll/index.d.ts",
+			"default": "./dist/core/useWindowScroll/index.js"
 		},
 		"./useDarkReader": {
 			"types": "./dist/integrations/useDarkReader/index.d.ts",
-			"svelte": "./dist/integrations/useDarkReader/index.js"
+			"default": "./dist/integrations/useDarkReader/index.js"
+		},
+		"./dist/integrations/useDarkReader": {
+			"types": "./dist/integrations/useDarkReader/index.d.ts",
+			"default": "./dist/integrations/useDarkReader/index.js"
 		},
 		"./usePDF": {
 			"types": "./dist/integrations/usePDF/index.d.ts",
-			"svelte": "./dist/integrations/usePDF/index.js"
+			"default": "./dist/integrations/usePDF/index.js"
+		},
+		"./dist/integrations/usePDF": {
+			"types": "./dist/integrations/usePDF/index.d.ts",
+			"default": "./dist/integrations/usePDF/index.js"
 		},
 		"./useSortable": {
 			"types": "./dist/integrations/useSortable/index.d.ts",
-			"svelte": "./dist/integrations/useSortable/index.js"
+			"default": "./dist/integrations/useSortable/index.js"
+		},
+		"./dist/integrations/useSortable": {
+			"types": "./dist/integrations/useSortable/index.d.ts",
+			"default": "./dist/integrations/useSortable/index.js"
+		},
+		"./components": {
+			"types": "./dist/components/index.d.ts",
+			"default": "./dist/components/index.js"
+		},
+		"./dist/components": {
+			"types": "./dist/components/index.d.ts",
+			"default": "./dist/components/index.js"
+		},
+		"./integrations": {
+			"types": "./dist/integrations/index.d.ts",
+			"default": "./dist/integrations/index.js"
+		},
+		"./dist/integrations": {
+			"types": "./dist/integrations/index.d.ts",
+			"default": "./dist/integrations/index.js"
+		},
+		"./directives": {
+			"types": "./dist/directives/index.d.ts",
+			"default": "./dist/directives/index.js"
+		},
+		"./dist/directives": {
+			"types": "./dist/directives/index.d.ts",
+			"default": "./dist/directives/index.js"
 		},
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./SvelteSortable.svelte": {
+			"types": "./dist/components/SvelteSortable.svelte.d.ts",
+			"svelte": "./dist/components/SvelteSortable.svelte"
+		},
+		"./dist/components/SvelteSortable.svelte": {
+			"types": "./dist/components/SvelteSortable.svelte.d.ts",
+			"svelte": "./dist/components/SvelteSortable.svelte"
 		}
 	}
 }
