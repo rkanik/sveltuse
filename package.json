@@ -1,6 +1,6 @@
 {
 	"name": "sveltuse",
-	"version": "0.0.13",
+	"version": "0.0.14",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"type": "module",
 	"main": "dist/index.js",
@@ -105,8 +105,11 @@
 		"dist",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*",
-		"!dist/**/*.svelte",
-		"!dist/**/*.svelte.*"
+		"!dist/**/index.svelte",
+		"!dist/**/demo.svelte",
+		"!dist/**/demo.svelte.d.ts",
+		"!dist/**/demo*.svelte",
+		"!dist/**/demo*.svelte.d.ts"
 	],
 	"contributors": [
 		"RK Anik <rkanik.me@gmail.com>"
