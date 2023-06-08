@@ -2,14 +2,18 @@
 	"cSpell.words": [
 		"Anik",
 		"Arrayable",
+		"darkreader",
+		"docsearch",
 		"flowbite",
 		"iconify",
 		"mdsvex",
 		"mdsvexamples",
 		"Pausable",
+		"popperjs",
 		"sortablejs",
 		"sveltuse",
-		"Sveluse"
+		"Sveluse",
+		"unlighthouse"
 	],
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,

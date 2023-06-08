@@ -1,4 +1,3 @@
-import 'darkreader/index.d.ts'
 import type { DynamicThemeFix, Theme } from 'darkreader'
 
 import { useScriptTag } from 'sveltuse/core'
