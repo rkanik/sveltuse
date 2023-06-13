@@ -1,6 +1,6 @@
 {
 	"name": "sveltuse",
-	"version": "0.0.15",
+	"version": "0.0.14",
 	"description": "Collection of Essential Svelte Composition Utilities",
 	"type": "module",
 	"main": "dist/index.js",
@@ -145,6 +145,14 @@
 			"types": "./dist/core/useBreakpoints/index.d.ts",
 			"default": "./dist/core/useBreakpoints/index.js"
 		},
+		"./useClickOutside": {
+			"types": "./dist/core/useClickOutside/index.d.ts",
+			"default": "./dist/core/useClickOutside/index.js"
+		},
+		"./dist/core/useClickOutside": {
+			"types": "./dist/core/useClickOutside/index.d.ts",
+			"default": "./dist/core/useClickOutside/index.js"
+		},
 		"./useClipboard": {
 			"types": "./dist/core/useClipboard/index.d.ts",
 			"default": "./dist/core/useClipboard/index.js"
@@ -249,6 +257,14 @@
 			"types": "./dist/core/useMediaQuery/index.d.ts",
 			"default": "./dist/core/useMediaQuery/index.js"
 		},
+		"./useMenu": {
+			"types": "./dist/core/useMenu/index.d.ts",
+			"default": "./dist/core/useMenu/index.js"
+		},
+		"./dist/core/useMenu": {
+			"types": "./dist/core/useMenu/index.d.ts",
+			"default": "./dist/core/useMenu/index.js"
+		},
 		"./useMounted": {
 			"types": "./dist/core/useMounted/index.d.ts",
 			"default": "./dist/core/useMounted/index.js"
@@ -280,6 +296,14 @@
 		"./dist/core/useObjectUrl": {
 			"types": "./dist/core/useObjectUrl/index.d.ts",
 			"default": "./dist/core/useObjectUrl/index.js"
+		},
+		"./useOffsetPagination": {
+			"types": "./dist/core/useOffsetPagination/index.d.ts",
+			"default": "./dist/core/useOffsetPagination/index.js"
+		},
+		"./dist/core/useOffsetPagination": {
+			"types": "./dist/core/useOffsetPagination/index.d.ts",
+			"default": "./dist/core/useOffsetPagination/index.js"
 		},
 		"./usePermission": {
 			"types": "./dist/core/usePermission/index.d.ts",
@@ -329,6 +353,14 @@
 			"types": "./dist/core/useScrollEnd/index.d.ts",
 			"default": "./dist/core/useScrollEnd/index.js"
 		},
+		"./useSelect": {
+			"types": "./dist/core/useSelect/index.d.ts",
+			"default": "./dist/core/useSelect/index.js"
+		},
+		"./dist/core/useSelect": {
+			"types": "./dist/core/useSelect/index.d.ts",
+			"default": "./dist/core/useSelect/index.js"
+		},
 		"./useStates": {
 			"types": "./dist/core/useStates/index.d.ts",
 			"default": "./dist/core/useStates/index.js"
@@ -344,6 +376,14 @@
 		"./dist/core/useSupported": {
 			"types": "./dist/core/useSupported/index.d.ts",
 			"default": "./dist/core/useSupported/index.js"
+		},
+		"./useTeleport": {
+			"types": "./dist/core/useTeleport/index.d.ts",
+			"default": "./dist/core/useTeleport/index.js"
+		},
+		"./dist/core/useTeleport": {
+			"types": "./dist/core/useTeleport/index.d.ts",
+			"default": "./dist/core/useTeleport/index.js"
 		},
 		"./useThrottleFn": {
 			"types": "./dist/core/useThrottleFn/index.d.ts",
@@ -376,14 +416,6 @@
 		"./dist/core/useWindowScroll": {
 			"types": "./dist/core/useWindowScroll/index.d.ts",
 			"default": "./dist/core/useWindowScroll/index.js"
-		},
-		"./dist/useOffsetPagination": {
-			"types": "./dist/core/useOffsetPagination/index.d.ts",
-			"default": "./dist/core/useOffsetPagination/index.js"
-		},
-		"./dist/core/useOffsetPagination": {
-			"types": "./dist/core/useOffsetPagination/index.d.ts",
-			"default": "./dist/core/useOffsetPagination/index.js"
 		},
 		"./useDarkReader": {
 			"types": "./dist/integrations/useDarkReader/index.d.ts",

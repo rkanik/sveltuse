@@ -190,8 +190,8 @@ export const useOffsetPagination = (payload?: UseOffsetPaginationPayload) => {
 
 	return {
 		page,
-		perPage,
 		total,
+		perPage,
 		lastPage,
 		totalVisible,
 		isFirstPage,
@@ -204,6 +204,6 @@ export const useOffsetPagination = (payload?: UseOffsetPaginationPayload) => {
 		gotoNextPage,
 		gotoLastPage,
 
-		pages: pages as Readable<(string | number)[]>
+		pages: pages as Readable<('...' | number)[]>
 	}
 }

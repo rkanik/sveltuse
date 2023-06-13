@@ -6,7 +6,7 @@ export type Arrayable<T> = T[] | T
 /**
  * Any function
  */
-export type AnyFn = (...args: any[]) => any
+export type AnyFn = ((...args: unknown[]) => unknown) | (() => unknown)
 
 export type Awaitable<T> = Promise<T> | T
 

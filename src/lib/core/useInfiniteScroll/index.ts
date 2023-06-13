@@ -3,15 +3,13 @@
 import type { UseScrollOptions } from '../useScroll'
 import type { Awaitable, MaybeGetter } from 'sveltuse/types'
 
-import { tick } from 'svelte'
 import { writable } from 'svelte/store'
 import { useScroll } from '../useScroll'
 
+import sleep from 'sveltuse/utils/sleep'
 import watch from 'sveltuse/utils/watch'
 import toValue from 'sveltuse/utils/toValue'
-import computed from 'sveltuse/utils/computed'
 import getStoreValue from 'sveltuse/utils/getStoreValue'
-import sleep from 'sveltuse/utils/sleep'
 
 export interface UseInfiniteScrollOptions extends UseScrollOptions {
 	/**
