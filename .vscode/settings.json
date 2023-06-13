@@ -17,5 +17,6 @@
 	],
 	"editor.detectIndentation": false,
 	"editor.formatOnSave": true,
-	"vite.autoStart": false
+	"vite.autoStart": false,
+	"typescript.tsdk": "node_modules\\typescript\\lib"
 }

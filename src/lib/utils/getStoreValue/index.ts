@@ -1,9 +1,2 @@
-import type { Store } from 'sveltuse/types'
-
-export default function getStoreValue<T>(store: Store<T>): T {
-	let value
-	store.subscribe(($store) => {
-		value = $store
-	})()
-	return value as T
-}
+import { get_store_value } from 'svelte/internal'
+export default get_store_value
