@@ -13,10 +13,8 @@
 	// export let data: PageData
 
 	let title = 'Sveltuse - Composition Utilities'
-	let description =
-		'Sveltuse is an open-source UI component library built with Svelte components, Tailwind CSS utility classes and based on the Flowbite design system and components.'
-	let default_title = 'Svelte UI Components'
-	const image = `https://open-graph-vercel.vercel.app/api/flowbite-svelte?title=${default_title}`
+	let description = 'Sveltuse Collection of Svelte Composition Utilities'
+	const image = `https://i.ibb.co/JdJHRqx/sveltuse.png`
 </script>
 
 <MetaTags
@@ -25,7 +23,7 @@
 	facebook={{ appId: '453670756870545' }}
 	openGraph={{
 		type: 'website',
-		url: `https://flowbite-svelte.com/`,
+		url: `https://sveltuse.pages.dev/`,
 		title: `${title}`,
 		description: `${description}`,
 		images: [{ url: image, width: 1200, height: 630, alt: `${title}` }],

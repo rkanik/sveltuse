@@ -49,7 +49,7 @@ See Usage, api and examples in [sveltuse documentations.](https://sveltuse.pages
 
 ## Contribute
 
-Please read [how to contribute](https://sveltuse.pages.dev/docs/pages/how-to-contribute) if you'd like to be part of the Flowbite community of contributors.
+Please read [how to contribute](https://sveltuse.pages.dev/docs/pages/how-to-contribute) if you'd like to be part of the Sveltuse community of contributors.
 
 ## License
 

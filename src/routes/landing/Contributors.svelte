@@ -30,8 +30,8 @@
 				Community contributors
 			</h2>
 			<p class="text-lg font-normal text-center">
-				Join the open-source community by contributing to the Flowbite
-				Svelte Library and become one of the highlighted members
+				Join the open-source community by contributing to the Sveltuse and
+				become one of the highlighted members
 			</p>
 		</div>
 		<!-- avatars -->
@@ -67,7 +67,7 @@
 					</h2>
 					<p>
 						Become a member of a community of developers supporting by
-						Flowbite
+						Sveltuse
 					</p>
 				</div>
 				<a
