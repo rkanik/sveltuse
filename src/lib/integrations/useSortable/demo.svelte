@@ -1,19 +1,3 @@
----
-id: 1
-layout: PostLayout
-
-# Sidebar link
-href: /integrations/useSortable
-hrefText:
-
-# Heading
-title: useSortable
-description: Svelte drag-and-drop utility based on Sortable.js
----
-
-# Example
-
-```svelte example
 <script>
 	import { writable } from 'svelte/store'
 	import { useSortable } from 'sveltuse/integrations'
@@ -79,4 +63,3 @@ description: Svelte drag-and-drop utility based on Sortable.js
 		<pre><code>{@html JSON.stringify($listItems2, null, 1)}</code></pre>
 	</div>
 </div>
-```

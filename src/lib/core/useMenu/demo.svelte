@@ -1,9 +1,9 @@
-<script lang="ts">
+<script>
 	import { useMenu } from 'sveltuse'
 	import { fly } from 'svelte/transition'
 
-	let activatorEl: HTMLElement
-	let contentEl: HTMLElement
+	let activatorEl
+	let contentEl
 
 	const a = useMenu({
 		activatorEl: () => activatorEl,
@@ -11,7 +11,7 @@
 	})
 </script>
 
-<div class="">
+<div>
 	<button bind:this={activatorEl} class="bg-gray-700 h-10 rounded px-20">
 		Click me
 	</button>
