@@ -9,7 +9,7 @@
 		FooterLinkGroup
 	} from 'flowbite-svelte'
 
-	let logo = '/images/flowbite-svelte-icon-logo.svg'
+	let logo = '/images/favicon.png'
 
 	let isHomePage: boolean
 	$: isHomePage = $page.route.id === '/'

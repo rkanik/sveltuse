@@ -26,7 +26,7 @@
 
 	let version = data.package.version ?? 'N/A'
 
-	let logo = '/images/flowbite-svelte-icon-logo.svg'
+	let logo = '/images/favicon.png'
 	let divClass = 'w-full ml-auto lg:block lg:w-auto order-1 lg:order-none'
 	let ulClass =
 		'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium text-gray-900 dark:text-gray-300 gap-4'

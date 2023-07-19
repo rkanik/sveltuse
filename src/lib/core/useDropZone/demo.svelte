@@ -25,7 +25,7 @@
 </script>
 
 <div class="flex items-center space-x-2">
-	<img src="/images/favicon.svg" alt="Favicon" class="w-16" />
+	<img src="/images/favicon.png" alt="Favicon" class="w-16" />
 	<div class="italic text-sm">Drag me to dropzone</div>
 </div>
 <div
